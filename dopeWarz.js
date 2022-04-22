@@ -13,11 +13,26 @@ const drug = (name, price, quantity, quality) => {
     }
 }
 // Player Base Inventory 
-var playerInventory = [
+var PLAYERINVENTORY = [{
+    "name": "Nothing Here",
+    "quantity": 0,
+    "price": 0,
+    "quality": "None",
+}];
 
-];
+var MAXITEMS = 100;
+var LOSTDRUGS = 0;
 
+const checkNumOfItemsHeld = () => {
+    let itemsHeld = 0;
+    for (item of PLAYERINVENTORY) {
+        itemsHeld += item.quantity;
+    }
 
+    return itemsHeld;
+};
+
+var CURRENTNUMOFITEMS = checkNumOfItemsHeld();
 
 
 const drugList = [
@@ -93,25 +108,49 @@ const qualityOfItems = "AAA";
 
 // Add Item to Inventory Function
 
-const addDrugToInventory = (addedItem, numOfItems, qualityOfItems) => {
-    
-    for (let item of playerInventory) {
+const addDrugsToInventory = (addedItem, numOfItems, qualityOfItems) => {
+    CURRENTNUMOFITEMS = checkNumOfItemsHeld();
+    console.log(`Items Held: ${CURRENTNUMOFITEMS}g's`);
+    // Check if inventory is full
+    if (CURRENTNUMOFITEMS >= MAXITEMS) {
+        return console.log("You ain't got no more pockets!");
+    }
+
+    for (let item of PLAYERINVENTORY) {
         console.log(item);
-        // Check if already holding item
-        if (item.name == addedItem.name) {
-            console.log(item.quantity);
-            // Add numOfItems to total quantity in inventory
-            item.quantity = item.quantity + numOfItems;
-            console.log(item.quantity);
-        // Add new drug to inventory    
-        } else {
-            playerInventory.push(drug(addedItem.name, addedItem.price, numOfItems, qualityOfItems));
-            console.log(playerInventory);
+        // Check if there will be inventory overflow
+        if ((CURRENTNUMOFITEMS + numOfItems) > MAXITEMS) {
+            // set overFlow by subtracting Total Inventory from new Total
+            let overFlow = (CURRENTNUMOFITEMS + numOfItems) - MAXITEMS;
+            console.log(`You dropped ${overFlow}g's of ${item.name}`);
+            // Set new Item quantity for drugs
+            item.quantity += (MAXITEMS - CURRENTNUMOFITEMS);
+            // ADD to lost drugs stash to use in other events
+            LOSTDRUGS += overFlow;
+        
+        } else { // No Overflow
+            // Check if already holding item
+            if (item.name == addedItem.name) {
+                console.log(item.quantity);
+                // Add numOfItems to total quantity in inventory
+                item.quantity = item.quantity + numOfItems;
+                console.log(item.quantity);
+            // Add new drug to inventory    
+            } else {
+                // Checks if Inventory is empty
+                if (PLAYERINVENTORY[0].name == "Nothing Here") {
+                    // Remove Placeholder
+                    PLAYERINVENTORY.pop();
+                }
+                // Add new drug to inventory
+                PLAYERINVENTORY.push(drug(addedItem.name, addedItem.price, numOfItems, qualityOfItems));
+                console.log(PLAYERINVENTORY);
+            }
         }
     }  
 };
 
-// Inventory function, perhaps use module pattern like calculator example from odin
+
 
 const displayDrugMarket = () => {
 
