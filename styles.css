@@ -1,0 +1,80 @@
+html {
+    background: rgb(44, 44, 44);
+}
+
+#gameContainer {
+    /* min-width: 500px; */
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid green;
+}
+
+.resourceAmount {
+    text-align: right;
+}
+
+.grid {
+    background-color: rgba(18, 47, 76, 0.765);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: ; */
+    column-gap: 10px;
+    color: white;
+}
+
+#scoreBoard {
+    /* width: 50%; */
+    /* height: 33vh; */
+    border: 5px solid blue;
+
+}
+
+#inputButtons {
+    /* height: 33vh; */
+    border: 5px solid yellow;
+}
+
+#availableProduct {
+    border: 2px solid red;
+    text-align: center;
+}
+
+#locationImage {
+    display: block;
+    height: 15vh;
+    width: 100%;;
+    
+}
+
+table, th {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+td:last-of-type, th:last-of-type {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+td, th {
+    padding: 6px;
+}
+
+p {
+    border: 1px solid pink;
+    margin: 20px;
+}
+
+button {
+    border-radius: 12px;
+    padding: 5px;
+    width: 100%;
+    justify-self: center;
+}
