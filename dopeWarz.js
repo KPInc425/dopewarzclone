@@ -21,7 +21,7 @@ var PLAYERINVENTORY = [{
 }];
 
 var MAXITEMS = 100;
-var LOSTDRUGS = 0;
+var LOSTDRUGS = [];
 
 const checkNumOfItemsHeld = () => {
     let itemsHeld = 0;
@@ -126,7 +126,7 @@ const addDrugsToInventory = (addedItem, numOfItems, qualityOfItems) => {
             // Set new Item quantity for drugs
             item.quantity += (MAXITEMS - CURRENTNUMOFITEMS);
             // ADD to lost drugs stash to use in other events
-            LOSTDRUGS += overFlow;
+            LOSTDRUGS.push(drug(item.name, item.price, overFlow, item.quality));
         
         } else { // No Overflow
             // Check if already holding item
