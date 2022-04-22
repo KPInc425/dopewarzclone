@@ -12,12 +12,15 @@ const drug = (name, price, quantity, quality) => {
         quality,
     }
 }
-
+// Player Base Inventory 
 var playerInventory = [
 
 ];
 
-const drugListCity1 = [
+
+
+
+const drugList = [
     {
         "name": "Cannabis Flower",
         "price": 10,
@@ -61,7 +64,7 @@ const checkLuck = (luckLevel) => {
 }
 
 let luck = checkLuck();
-let price = drugListCity1[1].price;
+let price = drugList[1].price;
 
 const priceRange = (price, luck) => {
     // Check luck to determine price
@@ -90,17 +93,22 @@ const qualityOfItems = "AAA";
 
 // Add Item to Inventory Function
 
-const addItemToInventory = (addedItem, numOfItems, qualityOfItems) => {
+const addDrugToInventory = (addedItem, numOfItems, qualityOfItems) => {
     
     for (let item of playerInventory) {
         console.log(item);
+        // Check if already holding item
         if (item.name == addedItem.name) {
-            item.qty
+            console.log(item.quantity);
+            // Add numOfItems to total quantity in inventory
+            item.quantity = item.quantity + numOfItems;
+            console.log(item.quantity);
+        // Add new drug to inventory    
         } else {
             playerInventory.push(drug(addedItem.name, addedItem.price, numOfItems, qualityOfItems));
+            console.log(playerInventory);
         }
-    }
-    
+    }  
 };
 
 // Inventory function, perhaps use module pattern like calculator example from odin
