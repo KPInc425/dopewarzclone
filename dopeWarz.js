@@ -1,4 +1,4 @@
-// Not sure if this factory function is even needed
+// Drug Factory Function
 const drug = (name, price, quantity, quality) => {
     name = name;    //Street Name
     quantity = quantity;    // Grams
@@ -13,11 +13,13 @@ const drug = (name, price, quantity, quality) => {
     }
 };
 
-const locations = (locationName, avgQuality, priceRanking, services) => {
-    locationName = locationName;    // Single String name of location
-    avgQuality = avgQuality;        // Average Quality of products in the area
-    priceRanking = priceRanking;    // Multiplier for prices in area
-    services = services;            // Bank, Stores, Loanshark's, etc.
+// Location Factory Function
+const location = (locationName, avgQuality, priceRanking, services) => {
+    locationName = locationName;        // Single String name of location
+    avgQuality = avgQuality;            // Average Quality of products in the area
+    priceRanking = priceRanking;        // Multiplier for prices in area
+    services = services;                // Bank, Stores, Loanshark's, etc.
+    policePresence = policePresence;    // How much heat is in the area generally
 
     return {
         locationName,
@@ -27,6 +29,100 @@ const locations = (locationName, avgQuality, priceRanking, services) => {
     }
 };
 
+// Variable to hold Locations after initiation >> allow player to add locations or use default locations
+//const LOCATIONS = [];
+
+// Default Locations
+const LOCATIONS_LOCAL = [
+    {
+        locationName: "",
+        avgQuality: "",
+        priceRanking: "",
+        services: ""
+    },
+    {
+        locationName: "",
+        avgQuality: "",
+        priceRanking: "",
+        services: ""
+    },
+    {
+        locationName: "",
+        avgQuality: "",
+        priceRanking: "",
+        services: ""
+    },
+    {
+        locationName: "",
+        avgQuality: "",
+        priceRanking: "",
+        services: ""
+    },
+    {
+        locationName: "",
+        avgQuality: "",
+        priceRanking: "",
+        services: ""
+    },
+    {
+        locationName: "",
+        avgQuality: "",
+        priceRanking: "",
+        services: ""
+    },
+    {
+        locationName: "",
+        avgQuality: "",
+        priceRanking: "",
+        services: ""
+    },
+]
+
+const LOCATION_CITIES = [
+    {
+        cityName: "",           
+        cityDescription: "",    
+        cityControl: "",        // Org that has current control of the city.
+    }
+    {
+        cityName: "",           
+        cityDescription: "",    
+        cityControl: "",        // Org that has current control of the city.
+    }
+    {
+        cityName: "",           
+        cityDescription: "",    
+        cityControl: "",        // Org that has current control of the city.
+    }
+    {
+        cityName: "",           
+        cityDescription: "",    
+        cityControl: "",        // Org that has current control of the city.
+    }
+    {
+        cityName: "",           
+        cityDescription: "",    
+        cityControl: "",        // Org that has current control of the city.
+    }
+    {
+        cityName: "",           
+        cityDescription: "",    
+        cityControl: "",        // Org that has current control of the city.
+    }
+    {
+        cityName: "",           
+        cityDescription: "",    
+        cityControl: "",        // Org that has current control of the city.
+    }
+]
+
+// Player Variables
+var MAXITEMS = 100;
+var LOSTDRUGS = [];
+var CASHONHAND = 0;
+var BANKACCOUNT = 0;
+var DEBT = 0;
+
 // Player Base Inventory 
 var PLAYERINVENTORY = [{
     "name": "Nothing Here",
@@ -34,13 +130,6 @@ var PLAYERINVENTORY = [{
     "price": 0,
     "quality": "None",
 }];
-
-var MAXITEMS = 100;
-var LOSTDRUGS = [];
-var CASHONHAND = 0;
-var BANKACCOUNT = 0;
-var DEBT = 0;
-
 
 
 const checkNumOfItemsHeld = () => {
@@ -167,9 +256,21 @@ const addDrugsToInventory = (addedItem, numOfItems, qualityOfItems) => {
     }  
 };
 
-const buyItems = (addedItem, numOfItems) => {
+// Buy items
+const buyItemsWithCash = (addedItem, numOfItems, location, vendor, avgQuality) => {
     let totalPrice = addedItem.price * numOfItems
-    if (
+    if (totalPrice > CASHONHAND) {
+        console.log("Too Broke!");
+    } else {
+        console.log(`Purchased ${numOfItems} of ${addItem.name} from ${vendor} in ${location}`)
+        CASHONHAND -= totalPrice;
+        // Possible event goes here
+        //if event goes well
+            // Add drugs to inventory
+            addDrugsToInventory(addedItem, numOfItems, qualityOfItems);
+        // else 
+            // badEvent Scenario
+    }
 };
 
 
