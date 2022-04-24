@@ -11,7 +11,22 @@ const drug = (name, price, quantity, quality) => {
         price,
         quality,
     }
-}
+};
+
+const locations = (locationName, avgQuality, priceRanking, services) => {
+    locationName = locationName;    // Single String name of location
+    avgQuality = avgQuality;        // Average Quality of products in the area
+    priceRanking = priceRanking;    // Multiplier for prices in area
+    services = services;            // Bank, Stores, Loanshark's, etc.
+
+    return {
+        locationName,
+        avgQuality,
+        priceRanking,
+        services
+    }
+};
+
 // Player Base Inventory 
 var PLAYERINVENTORY = [{
     "name": "Nothing Here",
@@ -22,6 +37,11 @@ var PLAYERINVENTORY = [{
 
 var MAXITEMS = 100;
 var LOSTDRUGS = [];
+var CASHONHAND = 0;
+var BANKACCOUNT = 0;
+var DEBT = 0;
+
+
 
 const checkNumOfItemsHeld = () => {
     let itemsHeld = 0;
@@ -76,7 +96,7 @@ const checkLuck = (luckLevel) => {
     console.log(luckRoll);
 
     return luckRoll;
-}
+};
 
 let luck = checkLuck();
 let price = drugList[1].price;
@@ -97,7 +117,7 @@ const priceRange = (price, luck) => {
             return price = price;
         }
     }
-}
+};
 
 // Testing
 const addedItem = { "name": "Cannabis Flower","price": 10};
@@ -107,7 +127,6 @@ const qualityOfItems = "AAA";
 
 
 // Add Item to Inventory Function
-
 const addDrugsToInventory = (addedItem, numOfItems, qualityOfItems) => {
     CURRENTNUMOFITEMS = checkNumOfItemsHeld();
     console.log(`Items Held: ${CURRENTNUMOFITEMS}g's`);
@@ -115,7 +134,6 @@ const addDrugsToInventory = (addedItem, numOfItems, qualityOfItems) => {
     if (CURRENTNUMOFITEMS >= MAXITEMS) {
         return console.log("You ain't got no more pockets!");
     }
-
     for (let item of PLAYERINVENTORY) {
         console.log(item);
         // Check if there will be inventory overflow
@@ -127,7 +145,6 @@ const addDrugsToInventory = (addedItem, numOfItems, qualityOfItems) => {
             item.quantity += (MAXITEMS - CURRENTNUMOFITEMS);
             // ADD to lost drugs stash to use in other events
             LOSTDRUGS.push(drug(item.name, item.price, overFlow, item.quality));
-        
         } else { // No Overflow
             // Check if already holding item
             if (item.name == addedItem.name) {
@@ -148,6 +165,11 @@ const addDrugsToInventory = (addedItem, numOfItems, qualityOfItems) => {
             }
         }
     }  
+};
+
+const buyItems = (addedItem, numOfItems) => {
+    let totalPrice = addedItem.price * numOfItems
+    if (
 };
 
 
