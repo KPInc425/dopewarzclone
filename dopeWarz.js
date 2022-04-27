@@ -31,7 +31,7 @@
 
 
     // Location Factory Function
-    const createLocation = (locationName, avgQuality, priceRanking, services) => {
+    const createLocalLocation = (locationName, avgQuality, priceRanking, services) => {
         locationName = locationName;        // Single String name of location
         avgQuality = avgQuality;            // Average Quality of products in the area
         priceRanking = priceRanking;        // Multiplier for prices in area
@@ -42,7 +42,8 @@
             locationName,
             avgQuality,
             priceRanking,
-            services
+            services,
+            policePresence
         }
     };
 
@@ -50,88 +51,434 @@
     //const LOCATIONS = [];
 
     // Default Local Locations
-    const locationsLocal = [
+    const locationsLocalNewYork = [
         {
-            locationName: "",
-            avgQuality: "",
-            priceRanking: "",
-            services: ""
+            "locationName": "Bronx",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
         },
         {
-            locationName: "",
-            avgQuality: "",
-            priceRanking: "",
-            services: ""
+            "locationName": "Queens",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
         },
         {
-            locationName: "",
-            avgQuality: "",
-            priceRanking: "",
-            services: ""
+            "locationName": "Central Park",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
         },
         {
-            locationName: "",
-            avgQuality: "",
-            priceRanking: "",
-            services: ""
+            "locationName": "Manhattan",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
         },
         {
-            locationName: "",
-            avgQuality: "",
-            priceRanking: "",
-            services: ""
+            "locationName": "Coney Island",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
         },
         {
-            locationName: "",
-            avgQuality: "",
-            priceRanking: "",
-            services: ""
-        },
-        {
-            locationName: "",
-            avgQuality: "",
-            priceRanking: "",
-            services: ""
+            "locationName": "Brooklyn",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
         },
     ]
+    // Default Local Locations
+    const locationsLocalLosAngeles = [
+        {
+            "locationName": "Hollywood",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "West Hollywood",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "Downtown",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "Beverly Hills",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+    ]
+    // Default Local Locations
+    const locationsLocalChicago = [
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+    ]
+    // Default Local Locations
+    const locationsLocalHouston = [
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+    ]
+    // Default Local Locations
+    const locationsLocalPheonix = [
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+    ]
+    // Default Local Locations
+    const locationsLocalPhiladelphia = [
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+    ]
+    // Default Local Locations
+    const locationsLocalJacksonville = [
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+    ]
+    // Default Local Locations
+    const locationsLocalSeattle = [
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+        {
+            "locationName": "",
+            "avgQuality": "",
+            "priceRanking": "",
+            "services": "",
+            "policePresence": "",
+        },
+    ]
+
 
     // Default City Location
     const locationCities = [
         {
-            cityName: "",           
-            cityDescription: "",    
-            cityControl: "",        // Org that has current control of the city.
+            "cityName": "New York City, NY",           
+            "cityDescription": `The Big Apple, where all the Wallstreet money is 
+                              powdered coated and the ludes werent't left in 
+                              the 80's`,  
+            "cityControl": "Unknown",        // Org that has current control of the city.
         },
         {
-            cityName: "",           
-            cityDescription: "",    
-            cityControl: "",        // Org that has current control of the city.
+            "cityName": "Los Angeles, CA",           
+            "cityDescription": `Home to celebrities, artists and free spirits, 
+                              Los Angeles never stops attracting people from 
+                              every corner of the globe. This cosmopolitan 
+                              city offers a hub for the entertainment industry 
+                              and easy access to the beach and those interested
+                              in Candi!`,    
+            "cityControl": "Unknown",        // Org that has current control of the city.
         },
         {
-            cityName: "",           
-            cityDescription: "",    
-            cityControl: "",        // Org that has current control of the city.
+            "cityName": "Chicago, IL",           
+            "cityDescription": `The city is famous for its iconic architecture and 
+                              beautiful skyline. Those cold, bitter winters in Chicago
+                              make the need for Fire dire!`,    
+            "cityControl": "Unknown",        // Org that has current control of the city.
         },
         {
-            cityName: "",           
-            cityDescription: "",    
-            cityControl: "",        // Org that has current control of the city.
+            "cityName": "Houston, TX",           
+            "cityDescription": `Houston’s stable job market, diverse economy and livable 
+                              neighborhoods make the Texas city a popular choice for 
+                              young professionals. The night life is alive and well,
+                              and so are the party favors that go with it.`,    
+            "cityControl": "Unknown",        // Org that has current control of the city.
         },
         {
-            cityName: "",           
-            cityDescription: "",    
-            cityControl: "",        // Org that has current control of the city.
+            "cityName": "Pheonix, AZ",           
+            "cityDescription": `Surrounded by desert mountains and numerous hiking trails,
+                              Phoenix is the perfect place to live for those who love 
+                              spending time in the great outdoors getting 'attune' with
+                              nature`,    
+            "cityControl": "Unknown",        // Org that has current control of the city.
         },
         {
-            cityName: "",           
-            cityDescription: "",    
-            cityControl: "",        // Org that has current control of the city.
+            "cityName": "Philadelphia, PA",           
+            "cityDescription": `Besides being one of the most historically significant 
+                              cities in the country, Philadelphia offers a hip arts 
+                              scene, multiple music venues and plenty of trendy 
+                              restaurants, the Hipsters are into 'desiners if you 
+                              know what I mean.'`,    
+            "cityControl": "Unknown",        // Org that has current control of the city.
         },
         {
-            cityName: "",           
-            cityDescription: "",    
-            cityControl: "",        // Org that has current control of the city.
-        }
+            "cityName": "Jacksonville, FL",           
+            "cityDescription": `Jacksonville, perfectly positioned along the Atlantic 
+                              Ocean in Northeast Florida, is a natural paradise for 
+                              visitors looking for an 'affordable' yet luxurious 
+                              destination, with all the 'ammenities'.`,    
+            "cityControl": "Unknown",        // Org that has current control of the city.
+        },
+        {
+            "cityName": "Seattle, WA",           
+            "cityDescription": `The CHAZ Zone has been indefinitely extended for your 
+                              market, Visit Pike Place and the Pier to find plenty
+                              of similar fellows and those willing to invest to 
+                              new ideas and 'Start-Ups'`,    
+            "cityControl": "Unknown",        // Org that has current control of the city.
+        },
     ]
 
     // Player Base Inventory 

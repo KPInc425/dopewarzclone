@@ -8,9 +8,6 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 -Implement missing variable for player(health,day,non-drugs,etc.)
--Implement RemoveDrugs from inventory function
--implement sellItemsForCash function
--Fill in default location data
 -Dump Function
 -Travel Function
 -Store Function
@@ -30,3 +27,5 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 --May get less from vendors, may get jacked during deal
 -Good Deals
 --May get more from vendors or free products
+-Tribute to city owning orgs
+-Takeover
