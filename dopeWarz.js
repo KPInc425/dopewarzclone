@@ -1,4 +1,4 @@
-const app = (() => {
+// const app = (() => {
 
     // Drug Factory Function
     const drug = (name, price, quantity, quality) => {
@@ -31,7 +31,7 @@ const app = (() => {
 
 
     // Location Factory Function
-    const location = (locationName, avgQuality, priceRanking, services) => {
+    const createLocation = (locationName, avgQuality, priceRanking, services) => {
         locationName = locationName;        // Single String name of location
         avgQuality = avgQuality;            // Average Quality of products in the area
         priceRanking = priceRanking;        // Multiplier for prices in area
@@ -152,6 +152,22 @@ const app = (() => {
         return itemsHeld;
     };
 
+    // Check inventory for Item helper function
+    const checkForItem = (itemToCheck) => {
+        // https://flaviocopes.com/how-to-get-index-in-for-of-loop/
+        for (let [index, item] of PLAYERINVENTORY.entries()) {
+            if (item.name == itemToCheck.name) {
+                console.log("Item found");
+                return {
+                    "name": item.name,
+                    "index": index,
+                }
+            }
+        console.log("Item not found.");    
+        return null;
+        }
+    };
+
     // Player Variables
     let player = {
         maxItems : 100,
@@ -242,78 +258,128 @@ const app = (() => {
 
     // Price AVG function
     const checkPriceAverage = (itemsHeld, newItems) => {
-        let averagePrice = (itemsHeld.price * itemsHeld.quantity) + 
-                           (newItems.price * newItems.quantity) / 
+        let averagePrice = ((itemsHeld.price * itemsHeld.quantity) + 
+                           (newItems.price * newItems.quantity)) / 
                            (itemsHeld.quantity + newItems.quantity);
+        console.log(`AveragePrice: ${averagePrice}`);
+        averagePrice= Math.round(averagePrice);
 
         return averagePrice;
     };
 
     // Add Item to Inventory Function
-    const addDrugsToInventory = (addedItem, numOfItems, qualityOfItems) => {
+    const addDrugsToInventory = (addedItem) => {
         currentNumOfItems = checkNumOfItemsHeld();
         console.log(`Items Held: ${currentNumOfItems}g's`);
         // Check if inventory is full
-        if (currentNumOfItems >= MAXITEMS) {
+        if (currentNumOfItems >= player.maxItems) {
             return console.log("You ain't got no more pockets!");
         }
         for (let item of PLAYERINVENTORY) {
             console.log(item);
             // Check if there will be inventory overflow
-            if ((currentNumOfItems + numOfItems) > MAXITEMS) {
+            if ((currentNumOfItems + addedItem.quantity) > player.maxItems) {
                 // set overFlow by subtracting Total Inventory from new Total
-                let overFlow = (currentNumOfItems + numOfItems) - MAXITEMS;
+                let overFlow = (currentNumOfItems + addedItem.quantity) - player.maxItems;
                 console.log(`You dropped ${overFlow}g's of ${item.name}`);
                 // Set new Item quantity for drugs
-                item.quantity += (MAXITEMS - currentNumOfItems);
+                item.quantity += (player.maxItems - currentNumOfItems);
                 // ADD to lost drugs stash to use in other events
-                let newAvgPrice = checkPriceAverage(item,addedItem);
-                LOSTDRUGS.push(drug(item.name, newAvgPrice, overFlow, item.quality));
+                LOSTDRUGS.push(drug(item.name, item.price, overFlow, item.quality));
             } else { // No Overflow
                 // Check if already holding item
                 if (item.name == addedItem.name) {
                     console.log(item.quantity);
-                    // Add numOfItems to total quantity in inventory
-                    item.quantity = item.quantity + numOfItems;
 
+                    // Add addedItem.quantity to total quantity in inventory
+                    item.quantity = item.quantity + addedItem.quantity;
                     console.log(item.quantity);
-                // Add new drug to inventory    
-                } else {
+
+                    // Replace price with new average price
+                    console.log(item.price);
+                    item.price = checkPriceAverage(item, addedItem);
+                    console.log(item.price);
+                  
+                } else {    // Add new drug to inventory  
                     // Checks if Inventory is empty
                     if (PLAYERINVENTORY[0].name == "Nothing Here") {
                         // Remove Placeholder
                         PLAYERINVENTORY.pop();
                     }
                     // Add new drug to inventory
-                    PLAYERINVENTORY.push(drug(addedItem.name, addedItem.price, numOfItems, qualityOfItems));
+                    PLAYERINVENTORY.push(drug(addedItem.name, addedItem.price, addedItem.quantity, addedItem.quality));
                     console.log(PLAYERINVENTORY);
                 }
             }
         }  
     };
 
-    // Remove Item from Inventory Function
-    const removeDrugsFromInventory = () => {
-
-    };
-
-    // Buy items Local Items with Cash
-    const buyItemsWithCash = (addedItem, numOfItems, location, vendor, avgQuality) => {
-        let totalPrice = addedItem.price * numOfItems
+    // Buy items Locally with Cash
+    const buyItemsWithCash = (addedItem, currentLocation, vendor, avgQuality) => {
+        let totalPrice = addedItem.price * addedItem.quantity;
         if (totalPrice > player.cashOnHand) {
             console.log("Too Broke!");
         } else {
-            console.log(`Purchased ${numOfItems} of ${addItem.name} from ${vendor} in ${location}`)
+            console.log(`Purchased ${addedItem.quantity} of ${addedItem.name} from ${vendor} in ${currentLocation}`)
             player.cashOnHand -= totalPrice;
             // Possible event goes here
             //if event goes well
                 // Add drugs to inventory
-                addDrugsToInventory(addedItem, numOfItems, qualityOfItems);
+                addDrugsToInventory(addedItem);
             // else 
                 // badEvent Scenario
         }
     };
 
+    // Remove Item from Inventory Function
+    const removeDrugsFromInventory = (removedItem) => {
+
+        let foundItem = checkForItem(removedItem);
+
+        if (foundItem === null) {
+            console.log("You don't own this item.");
+            return 0;
+        }
+
+        let index = foundItem.index;
+        let item = PLAYERINVENTORY[index];
+
+        if ((item.quantity - removedItem.quantity) == 0) {
+            console.log("vvv Player Inventory vvv")
+            console.log(PLAYERINVENTORY);
+            // Remove object from array if quanitity is 0
+            PLAYERINVENTORY.splice(index, 1);
+            console.log("vvv Player Inventory vvv")
+            console.log(PLAYERINVENTORY);
+            // Re-add placeholder for empty inventory
+            PLAYERINVENTORY.push(drug("Nothing Here", 0, 0, 0));
+            return 1;
+        } else {
+            console.log(`Item Quantity: ${item.quantity}`);
+            // Remove amt of items from object if there are more than removing
+            item.quantity -= removedItem.quantity;
+            console.log(`Item Quantity: ${item.quantity}`);
+            return 1;
+        }
+
+    };
+
+
+
+    // Sell items locally for cash
+    const sellItemsForCash = (removedItem, currentLocation, vendor, avgQuality) => {
+        let totalPrice = removedItem.price * removedItem.quantity;
+        
+        let saleResult = removeDrugsFromInventory(removedItem);
+
+        if (saleResult == 1) {
+            player.cashOnHand += totalPrice;
+            return 1;
+        } else {
+            console.log("You don't have this to sell!");
+            return 0;
+        }
+    }
 
 
 
@@ -323,12 +389,13 @@ const app = (() => {
 
     // Testing
     let price = drugList[1].price;
-    const addedItem = { "name": "Cannabis Flower","price": 10};
-    const numOfItems = 420;
-    const qualityOfItems = "AAA";
+    const addedItem = { "name": "Cannabis Flower","price": 10, "quantity": 10, "quality": 3};
+    const removedItem = { "name": "Cannabis Flower","price": 10, "quantity": 10, "quality": 3};
+    // const numOfItems = 420;
+    // const qualityOfItems = "AAA";
     // Testing
 
-})();
+// })();
 
 
 // const drugList = [
