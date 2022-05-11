@@ -28,8 +28,7 @@
             quality,
         }
     };
-
-
+    
     // Location Factory Function
     const createLocalLocation = (locationName, avgQuality, priceRanking, services) => {
         locationName = locationName;        // Single String name of location
@@ -53,440 +52,455 @@
     // Default Local Locations
     const locationsLocalNewYork = [
         {
-            "locationName": "Bronx",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Bronx",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "Queens",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Queens",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "Central Park",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Central Park",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "Manhattan",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Manhattan",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "Coney Island",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Coney Island",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "Brooklyn",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Brooklyn",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
     ]
     // Default Local Locations
     const locationsLocalLosAngeles = [
         {
-            "locationName": "Hollywood",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Hollywood",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "West Hollywood",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "West Hollywood",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "Downtown",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Downtown",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "Beverly Hills",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Beverly Hills",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "The Beaches",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Pasadena",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
     ]
     // Default Local Locations
     const locationsLocalChicago = [
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Humboldt Park",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Garfield Park",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "West Loop",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Old Town",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Roscoe Village",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Lincoln Park",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
     ]
     // Default Local Locations
     const locationsLocalHouston = [
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Downtown",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Spring",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Fort Bend",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Brazoria",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Galveston",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Lake Houston",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
     ]
     // Default Local Locations
     const locationsLocalPheonix = [
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Paradise Valley",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Mesa",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Glendale",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Peoria",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Apache Junction",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Scottsdale",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
     ]
     // Default Local Locations
     const locationsLocalPhiladelphia = [
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Chestnut Hill",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Roxborough",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Mount Airy",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "East Falls",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "German Town",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "West Oak Lane",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
     ]
     // Default Local Locations
     const locationsLocalJacksonville = [
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Downtown",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Springfield",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Eastside",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Sports Complex",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Fairfield",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Brentwood",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
     ]
     // Default Local Locations
     const locationsLocalSeattle = [
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "North Gate",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Green Lake",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "University District",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Capitol Hill",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Sodo",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
         {
-            "locationName": "",
-            "avgQuality": "",
-            "priceRanking": "",
-            "services": "",
-            "policePresence": "",
+            locationName: "Magnolia",
+            avgQuality: "",
+            priceRanking: "",
+            services: "",
+            policePresence: "",
         },
     ]
-
 
     // Default City Location
     const locationCities = [
         {
-            "cityName": "New York City, NY",           
-            "cityDescription": `The Big Apple, where all the Wallstreet money is 
+            cityName: "New York City, NY",           
+            cityDescription: `The Big Apple, where all the Wallstreet money is 
                               powdered coated and the ludes werent't left in 
                               the 80's`,  
-            "cityControl": "Unknown",        // Org that has current control of the city.
+            cityControl: "Unknown",        // Org that has current control of the city.
         },
         {
-            "cityName": "Los Angeles, CA",           
-            "cityDescription": `Home to celebrities, artists and free spirits, 
+            cityName: "Los Angeles, CA",           
+            cityDescription: `Home to celebrities, artists and free spirits, 
                               Los Angeles never stops attracting people from 
                               every corner of the globe. This cosmopolitan 
                               city offers a hub for the entertainment industry 
                               and easy access to the beach and those interested
                               in Candi!`,    
-            "cityControl": "Unknown",        // Org that has current control of the city.
+            cityControl: "Unknown",        // Org that has current control of the city.
         },
         {
-            "cityName": "Chicago, IL",           
-            "cityDescription": `The city is famous for its iconic architecture and 
+            cityName: "Chicago, IL",           
+            cityDescription: `The city is famous for its iconic architecture and 
                               beautiful skyline. Those cold, bitter winters in Chicago
                               make the need for Fire dire!`,    
-            "cityControl": "Unknown",        // Org that has current control of the city.
+            cityControl: "Unknown",        // Org that has current control of the city.
         },
         {
-            "cityName": "Houston, TX",           
-            "cityDescription": `Houston’s stable job market, diverse economy and livable 
+            cityName: "Houston, TX",           
+            cityDescription: `Houston’s stable job market, diverse economy and livable 
                               neighborhoods make the Texas city a popular choice for 
                               young professionals. The night life is alive and well,
                               and so are the party favors that go with it.`,    
-            "cityControl": "Unknown",        // Org that has current control of the city.
+            cityControl: "Unknown",        // Org that has current control of the city.
         },
         {
-            "cityName": "Pheonix, AZ",           
-            "cityDescription": `Surrounded by desert mountains and numerous hiking trails,
+            cityName: "Pheonix, AZ",           
+            cityDescription: `Surrounded by desert mountains and numerous hiking trails,
                               Phoenix is the perfect place to live for those who love 
                               spending time in the great outdoors getting 'attune' with
                               nature`,    
-            "cityControl": "Unknown",        // Org that has current control of the city.
+            cityControl: "Unknown",        // Org that has current control of the city.
         },
         {
-            "cityName": "Philadelphia, PA",           
-            "cityDescription": `Besides being one of the most historically significant 
+            cityName: "Philadelphia, PA",           
+            cityDescription: `Besides being one of the most historically significant 
                               cities in the country, Philadelphia offers a hip arts 
                               scene, multiple music venues and plenty of trendy 
                               restaurants, the Hipsters are into 'desiners if you 
                               know what I mean.'`,    
-            "cityControl": "Unknown",        // Org that has current control of the city.
+            cityControl: "Unknown",        // Org that has current control of the city.
         },
         {
-            "cityName": "Jacksonville, FL",           
-            "cityDescription": `Jacksonville, perfectly positioned along the Atlantic 
+            cityName: "Jacksonville, FL",           
+            cityDescription: `Jacksonville, perfectly positioned along the Atlantic 
                               Ocean in Northeast Florida, is a natural paradise for 
                               visitors looking for an 'affordable' yet luxurious 
                               destination, with all the 'ammenities'.`,    
-            "cityControl": "Unknown",        // Org that has current control of the city.
+            cityControl: "Unknown",        // Org that has current control of the city.
         },
         {
-            "cityName": "Seattle, WA",           
-            "cityDescription": `The CHAZ Zone has been indefinitely extended for your 
+            cityName: "Seattle, WA",           
+            cityDescription: `The CHAZ Zone has been indefinitely extended for your 
                               market, Visit Pike Place and the Pier to find plenty
                               of similar fellows and those willing to invest to 
                               new ideas and 'Start-Ups'`,    
-            "cityControl": "Unknown",        // Org that has current control of the city.
+            cityControl: "Unknown",        // Org that has current control of the city.
         },
     ]
 
+    // Player Variables
+    let player = {
+        maxItems : 100,
+        currentNumOfItems : 0,
+        lostDrugs : [],
+        cashOnHand : 0,
+        bankAccount : 0,
+        debt : 0,
+        currentDay : 1,
+        maxDays : 30,
+        health : 100,
+        luckLevel : 1, 
+        currentLocationCity: "Seattle, WA",
+        currentLocal: "Capitol Hill",
+    }
+
     // Player Base Inventory 
     var PLAYERINVENTORY = [{
-        "name": "Nothing Here",
-        "quantity": 0,
-        "price": 0,
-        "quality": "None",
+        name: "Nothing Here",
+        quantity: 0,
+        price: 0,
+        quality: "None",
     }];
 
     // Check Player inventory for total items held
@@ -515,49 +529,35 @@
         }
     };
 
-    // Player Variables
-    let player = {
-        maxItems : 100,
-        currentNumOfItems : checkNumOfItemsHeld(),
-        lostDrugs : [],
-        cashOnHand : 0,
-        bankAccount : 0,
-        debt : 0,
-        currentDay : 1,
-        maxDays : 30,
-        health : 100,
-        luckLevel : 1,  
-    }
-
     // Default Drug List
     const drugList = [
         {
-            "name": "Cannabis Flower",
-            "price": 10,
+            name: "Cannabis Flower",
+            price: 10,
         },
         {
-            "name": "Cannabis Extract",
-            "price": 30,
+            name: "Cannabis Extract",
+            price: 30,
         },
         {
-            "name": "Acid",
-            "price": 15,
+            name: "Acid",
+            price: 15,
         },
         {
-            "name": "Cocaine",
-            "price": 120,
+            name: "Cocaine",
+            price: 120,
         },
         {
-            "name": "Crack",
-            "price": 70,
+            name: "Crack",
+            price: 70,
         },
         {
-            "name": "Heroin",
-            "price": 182,
+            name: "Heroin",
+            price: 182,
         },
         {
-            "name": "Methamphetamine",
-            "price": 50,
+            name: "Methamphetamine",
+            price: 50,
         },
     ];
 
@@ -712,7 +712,6 @@
     };
 
 
-
     // Sell items locally for cash
     const sellItemsForCash = (removedItem, currentLocation, vendor, avgQuality) => {
         let totalPrice = removedItem.price * removedItem.quantity;
@@ -726,9 +725,41 @@
             console.log("You don't have this to sell!");
             return 0;
         }
+    };
+
+    const travelLocal = (destination) => {
+        let eventOutcome;
+        let randomEvent;
+
+        // Check if we are already at location
+        if (player.currentLocal = destination) {
+            console.log("You are already here!")
+        }
+
+        // Possibility of Random Event (Make function)
+        console.log("You are getting ready to travel.");
+        console.log("Hope everything goes well...")
+        console.log("~Checking for Random Event~");
+        randomEvent = checkForRandomTravelEvent();
+        // Update player locatin to new location
+        if (randomEvent == true) {
+            // Run random event
+            console.log("Looks like something came up.");
+            console.log("~Running Random Event~")
+            eventOutcome = runRandomTravelEvent();
+        }
+
+        console.log("Looks like it's gonna be smooth sailing!");
+
+        if (eventOutcome == true) {
+            console.log(`Successful travel to ${destination}`);
+            player.currentLocal = destination;
+        } else {
+            console.log(`Doesn't look like your going to make it today, ${eventOutcome} 
+                         it gonna tie us up today`);
+        }
+
     }
-
-
 
     const displayDrugMarket = () => {
 
