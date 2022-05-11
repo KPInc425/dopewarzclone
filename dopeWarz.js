@@ -389,8 +389,10 @@
         },
         {
             locationName: "Capitol Hill",
-            avgQuality: "",
+            avgQuality: 0,                      //Bammer
             priceRanking: "",
+            minQuantity: 0
+            maxQuantity: 100,
             services: "",
             policePresence: "",
         },
@@ -761,8 +763,58 @@
 
     }
 
-    const displayDrugMarket = () => {
 
+    const calculateItemCost = (price, multiplier) => {
+        let currentCost = price * multiplier;
+        return currentCost;
+    }
+
+    const calculateLocationQuantity = (location, multiplier) => {
+
+        let currentQuantity;
+        switch(multiplier) {
+            case 0:
+                console.log("Just a regular day in the neighborhood...")
+                currentQuantity = (Math.floor(Math.random() * location.maxQuantity));
+                break;
+            case 1: 
+                console.log("Business is good");
+                currentQuantity = (Math.floor(Math.random() * location.maxQuantity) * 2);
+                break;
+            case 2: 
+                console.log("The Market is Flooded!");
+                currentQuantity = (Math.floor(Math.random() * location.maxQuantity) * 4);
+                break;
+            case -1: 
+                console.log("Things are a little dry today...");
+                currentQuantity = (Math.floor(Math.random() * location.maxQuantity) / 2);
+                break;
+            case -2:
+                console.log("We in a drought, I would be surprised if you found any...");
+                currentQuantity = (Math.floor(Math.random() * location.maxQuantity) / 4);
+                break;
+        }
+
+        return currentQuantity;
+        
+    }
+
+    const drugMarketInventory = (location, drugList, marketInfluence) => {
+        // Initialize Location Inventory Array
+        let todaysInventory = [];
+        // For each product on the current druglist populate current product data
+        for (product of drugList) {
+
+            // Set variables and make calculations
+            let name = product.name;
+            let price = calculateItemCost(product.price, marketInfluence);
+            let quantity = calculateLocationQuantity(location, marketInfluence);
+            let quality =  qualityCheck(location.avgQuality);
+
+            // Populate current location inventory
+            todaysInventory.push(drug(name, price, quantity, quality));
+        }
+        console.log(todaysInventory);
     }
 
     // Testing
