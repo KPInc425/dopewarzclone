@@ -763,10 +763,46 @@
 
     }
 
+    // Gives a random chance to increase/decrease price by a percentage
+    const randomFluctuations = (percentage) => {
+        let moreOrLess = Math.floor(Math.random() * 100);
+        if (moreOrLess > 50) {
+            percentage = Math.floor(Math.random() * percentage);
+        } else {
+            percentage = Math.floor(Math.random() * percentage) * -1;
+        }
+        return percentage;
+    }
 
     const calculateItemCost = (price, multiplier) => {
-        let currentCost = price * multiplier;
+
+        let currentCost;
+
+        switch(multiplier) {
+            case 0:
+                console.log("Capacetic Pricing.")
+                currentCost = price + (price * randomFluctuations(10));
+                break;
+            case 1: 
+                console.log("Prices are down");
+                currentCost = (price + (price * randomFluctuations(10)) / 2);
+                break;
+            case 2: 
+                console.log("Cheap Cheap Product!");
+                currentCost = currentCost = (price + (price * randomFluctuations(10)) / 4);;
+                break;
+            case -1: 
+                console.log("Stuff is getting pricy!");
+                currentCost = (price + (price * randomFluctuations(10)) * 2);
+                break;
+            case -2:
+                console.log("It is NOT a buyers market!");
+                currentCost = currentCost = (price + (price * randomFluctuations(10)) * 4);
+                break;
+        }
+
         return currentCost;
+
     }
 
     const calculateLocationQuantity = (location, multiplier) => {
