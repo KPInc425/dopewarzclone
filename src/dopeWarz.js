@@ -525,8 +525,16 @@ import player from './player';
         locationDisplay.innerText = value;
     }
 
+    const changeHealth = (change) => {
+        player.health =+ change;
+        console.log(`Player Health: ${player.health}`);
+    }
 
-
+    const updateHealthDisplay = () => {
+        const healthDisplay = document.getElementById('healthDisplay');
+        console.log(healthDisplay);
+        healthDisplay.innerText = `${player.health}%`
+    }
     
 
 
