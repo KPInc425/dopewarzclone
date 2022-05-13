@@ -7,6 +7,8 @@ import checkNumOfItemsHeld from './checkNumOfItems';
 import checkLuck from './checkLuck';
 import qualityCheck from './qualityCheck';
 import priceRange from './priceRange';
+import travelLocal from './travelLocal';
+import player from './player';
 
 
 // const app = (() => {
@@ -447,21 +449,21 @@ import priceRange from './priceRange';
         },
     ]
 
-    // Player Variables
-    let player = {
-        maxItems : 100,
-        currentNumOfItems : 0,
-        lostDrugs : [],
-        cashOnHand : 0,
-        bankAccount : 0,
-        debt : 0,
-        currentDay : 1,
-        maxDays : 30,
-        health : 100,
-        luckLevel : 1, 
-        currentLocationCity: "Seattle, WA",
-        currentLocal: "Capitol Hill",
-    }
+    // // Player Variables
+    // let player = {
+    //     maxItems : 100,
+    //     currentNumOfItems : 0,
+    //     lostDrugs : [],
+    //     cashOnHand : 0,
+    //     bankAccount : 0,
+    //     debt : 0,
+    //     currentDay : 1,
+    //     maxDays : 30,
+    //     health : 100,
+    //     luckLevel : 1, 
+    //     currentLocationCity: "Seattle, WA",
+    //     currentLocal: "Capitol Hill",
+    // }
 
     // Player Base Inventory 
     var PLAYERINVENTORY = [{
@@ -503,12 +505,25 @@ import priceRange from './priceRange';
         },
     ];
 
-    const populateScoreboard = () => {
-        const cashDisplay = document.getElementById('cashDisplay');
-        console.log(cashDisplay);
-        
-    }
 
+    const formatter = new Intl.NumberFormat({
+        style: 'currency'
+    });
+
+    const updateCurrencyDisplay = (selector, value) => {
+        const currencyDisplay = document.getElementById(selector);
+        let newValue = formatter.format(value);
+        console.log(currencyDisplay);
+        currencyDisplay.innerText = `$${newValue}`;
+    };
+
+    // travelLocal(`KP's House`);
+
+    const updateLocationDisplay = (value) => {
+        const locationDisplay = document.getElementById('currentLocation');
+        console.log(locationDisplay);
+        locationDisplay.innerText = value;
+    }
 
 
 
