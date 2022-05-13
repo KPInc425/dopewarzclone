@@ -503,15 +503,16 @@ import priceRange from './priceRange';
         },
     ];
 
-
+    const populateScoreboard = () => {
+        const cashDisplay = document.getElementById('cashDisplay');
+        console.log(cashDisplay);
+        
+    }
 
 
 
 
     
-
-
-
 
 
     // Testing
