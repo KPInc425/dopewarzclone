@@ -2,9 +2,9 @@ html {
     background: rgb(44, 44, 44);
 }
 
-#gameContainer {
-    /* min-width: 500px; */
-}
+/* #gameContainer {
+    min-width: 500px;
+} */
 
 .flexContainer {
     display: flex;

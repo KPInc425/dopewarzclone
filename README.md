@@ -29,3 +29,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 --May get more from vendors or free products
 -Tribute to city owning orgs
 -Takeover
+
+--Done?--
+-Local Travel Function
+-Player Variables
