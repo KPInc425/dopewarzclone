@@ -12,6 +12,7 @@ let player = {
     luckLevel : 1, 
     currentLocationCity: "Seattle, WA",
     currentLocal: "Capitol Hill",
+    currentTransportMethod: "on the Bus",
 };
 
 export default player;

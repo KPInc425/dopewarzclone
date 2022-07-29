@@ -9,10 +9,13 @@ import qualityCheck from './qualityCheck.js';
 import priceRange from './priceRange.js';
 import travelLocal from './travelLocal.js';
 import player from './player.js';
+import updateLocationDisplay from './updateLocationDisplay.js';
+import updateTransportationMethodDisplay from './updateTransportMethodDisplay.js';
 
 
 // const app = (() => {
 
+    console.log("Testing...")
 
     // Variable to hold Locations after initiation >> allow player to add locations or use default locations
     //const LOCATIONS = [];
@@ -518,24 +521,24 @@ import player from './player.js';
         currencyDisplay.innerText = `$${newValue}`;
     };
 
-    // travelLocal(`KP's House`);
-
-    const updateLocationDisplay = (value) => {
-        const locationDisplay = document.getElementById('currentLocation');
-        console.log(locationDisplay);
-        locationDisplay.innerText = value;
-    }
+    // const updateLocationDisplay = (value) => {
+    //     const locationDisplay = document.getElementById('currentLocation');
+    //     console.log(locationDisplay);
+    //     locationDisplay.innerText = value;
+    // }
 
     const changeHealth = (change) => {
         player.health += change;
         console.log(`Player Health: ${player.health}`);
     }
 
-    const updateHealthDisplay = () => {
-        const healthDisplay = document.getElementById('healthDisplay');
-        console.log(healthDisplay);
-        healthDisplay.innerText = `${player.health}%`
-    }
+
+
+    // travelLocal(`KP's House`);
+    //Initialize display player defaults
+    updateLocationDisplay(player.currentLocal);
+    updateTransportationMethodDisplay(player.currentTransportMethod);
+    
     
 
     // Testing
