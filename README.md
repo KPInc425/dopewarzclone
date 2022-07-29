@@ -12,7 +12,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -Travel Function
 -Store Function
 -LoanShark Function
--Health Function
+
 -Random Events
 -Flesh out buyitemswithcash function
 
@@ -33,3 +33,4 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 --Done?--
 -Local Travel Function
 -Player Variables
+-Health Function

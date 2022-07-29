@@ -1,5 +1,11 @@
 html {
-    background: rgb(44, 44, 44);
+    /* background: rgb(44, 44, 44); */
+    background-color: rgb(9, 9, 9);
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
 }
 
 /* #gameContainer {

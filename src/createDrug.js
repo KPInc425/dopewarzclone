@@ -1,5 +1,5 @@
 // Drug Factory Function
-const createItem = (name, price, quantity) => {
+const createDrug = (name, price, quantity, quality) => {
     name = name;            // Street Name
     quantity = quantity;    // Grams
     price = price;          // Dollars
@@ -17,7 +17,7 @@ const createItem = (name, price, quantity) => {
     }
 };
 
-export default createItem;
+export default createDrug;
 
 
 

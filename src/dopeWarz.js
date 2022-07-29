@@ -1,14 +1,14 @@
-import './styles.css';
-import './D5zdtk0.jpeg';
-import createItem from './createItem';
-import createNonDrugItem from './createNonDrugItem';
-import createLocalLocation from './createLocalLocation';
-import checkNumOfItemsHeld from './checkNumOfItems';
-import checkLuck from './checkLuck';
-import qualityCheck from './qualityCheck';
-import priceRange from './priceRange';
-import travelLocal from './travelLocal';
-import player from './player';
+import './styles.css' assert { type: 'css' };
+// import './D5zdtk0.jpeg';
+import createDrug from './createDrug.js';
+import createNonDrugItem from './createNonDrugItem.js';
+import createLocalLocation from './createLocalLocation.js';
+import checkNumOfItemsHeld from './checkNumOfItemsHeld.js';
+import checkLuck from './checkLuck.js';
+import qualityCheck from './qualityCheck.js';
+import priceRange from './priceRange.js';
+import travelLocal from './travelLocal.js';
+import player from './player.js';
 
 
 // const app = (() => {
@@ -497,7 +497,7 @@ import player from './player';
         },
         {
             name: "Heroin",
-            price: 182,
+            price: 95,
         },
         {
             name: "Methamphetamine",
@@ -513,6 +513,7 @@ import player from './player';
     const updateCurrencyDisplay = (selector, value) => {
         const currencyDisplay = document.getElementById(selector);
         let newValue = formatter.format(value);
+        console.log(newValue);
         console.log(currencyDisplay);
         currencyDisplay.innerText = `$${newValue}`;
     };
@@ -526,7 +527,7 @@ import player from './player';
     }
 
     const changeHealth = (change) => {
-        player.health =+ change;
+        player.health += change;
         console.log(`Player Health: ${player.health}`);
     }
 
@@ -536,7 +537,6 @@ import player from './player';
         healthDisplay.innerText = `${player.health}%`
     }
     
-
 
     // Testing
     let price = drugList[1].price;

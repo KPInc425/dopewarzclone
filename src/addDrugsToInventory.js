@@ -1,4 +1,6 @@
 import checkPriceAverage from './checkPriceAverage';
+import createDrug from './createDrug';
+import checkNumOfItemsHeld from './checkNumOfItemsHeld'
 
 // Add Item to Inventory Function
 const addDrugsToInventory = (addedItem) => {
@@ -18,7 +20,7 @@ const addDrugsToInventory = (addedItem) => {
             // Set new Item quantity for drugs
             item.quantity += (player.maxItems - currentNumOfItems);
             // ADD to lost drugs stash to use in other events
-            LOSTDRUGS.push(createItem(item.name, item.price, overFlow, item.quality));
+            LOSTDRUGS.push(createDrug(item.name, item.price, overFlow, item.quality));
         } else { // No Overflow
             // Check if already holding item
             if (item.name == addedItem.name) {
@@ -40,7 +42,7 @@ const addDrugsToInventory = (addedItem) => {
                     PLAYERINVENTORY.pop();
                 }
                 // Add new drug to inventory
-                PLAYERINVENTORY.push(createItem(addedItem.name, addedItem.price, addedItem.quantity, addedItem.quality));
+                PLAYERINVENTORY.push(createDrug(addedItem.name, addedItem.price, addedItem.quantity, addedItem.quality));
                 console.log(PLAYERINVENTORY);
             }
         }
