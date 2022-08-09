@@ -7,7 +7,7 @@ Used as an educational project to practice outside of my current curriculeum.
 Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
--Implement missing variable for player(health,day,non-drugs,etc.)
+
 -Dump Function
 -Travel Function
 -Store Function
@@ -34,3 +34,4 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -Local Travel Function
 -Player Variables
 -Health Function
+-Implement missing variable for player(health,day,non-drugs,etc.)
