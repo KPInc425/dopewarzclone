@@ -8,10 +8,11 @@ import checkLuck from './checkLuck.js';
 import qualityCheck from './qualityCheck.js';
 import priceRange from './priceRange.js';
 import travelLocal from './travelLocal.js';
-import player from './player.js';
+import createPlayer from './player.js';
 import updateLocationDisplay from './updateLocationDisplay.js';
 import updateTransportationMethodDisplay from './updateTransportMethodDisplay.js';
 import updateCurrencyDisplay from './updateCurrencyDisplay.js';
+import el_btnNewGame from './el_newGame';
 
 
 // const app = (() => {
@@ -525,12 +526,15 @@ import updateCurrencyDisplay from './updateCurrencyDisplay.js';
     // travelLocal(`KP's House`);
     //Initialize display player defaults
     const init = () => { 
-        updateLocationDisplay(player.currentLocal);
-        updateTransportationMethodDisplay(player.currentTransportMethod);
-        updateCurrencyDisplay('cashDisplay', player.cashOnHand);
-        updateCurrencyDisplay('bankDisplay', player.bankAccount);
-        updateCurrencyDisplay('debtDisplay', player.debt);
-        updateHealthDisplay(player.health);
+        let player1 = createPlayer(20,200,50000,20000,50000);
+        updateLocationDisplay(player1.playerData.currentLocal);
+        updateTransportationMethodDisplay(player1.playerData.currentTransportMethod);
+        updateCurrencyDisplay('cashDisplay', player1.playerData.cashOnHand);
+        console.log(player1.playerData.bankAccount);
+        updateCurrencyDisplay('bankDisplay', player1.playerData.bankAccount);
+        updateCurrencyDisplay('debtDisplay', player1.playerData.debt);
+        updateHealthDisplay(player1.playerData.health);
+        el_btnNewGame();
     }
 
     init();

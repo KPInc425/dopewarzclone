@@ -8,6 +8,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 
+-add player inventory to createPlayer factory function
 -Dump Function
 -Travel Function
 -Store Function
