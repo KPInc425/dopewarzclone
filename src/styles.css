@@ -6,11 +6,18 @@ html {
 body {
     max-width: 80%;
     margin: auto;
+    color: white;
 }
 
-/* #gameContainer {
-    min-width: 500px;
-} */
+h3 {
+    padding: 10px;
+}
+
+#gameContainer {
+    /* min-width: 500px; */
+    width: auto;
+    /* height: fit-content; */
+}
 
 .flexContainer {
     display: flex;
@@ -22,19 +29,56 @@ body {
     text-align: right;
 }
 
+.topGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: 70% 70% 5%; */
+    row-gap: 10px;
+    column-gap: 10px;
+    /* color: white; */
+    padding: 20px;
+    /* padding-left: 10px; */
+    height: max-content;
+}
+
 .grid {
-    background-color: rgba(18, 47, 76, 0.765);
+    /* background-color: rgba(18, 47, 76, 0.765); */
     display: grid;
     grid-template-columns: 50% 50%;
     /* grid-template-rows: ; */
     column-gap: 10px;
-    color: white;
+    /* color: white; */
+    /* padding: 20px;
+    padding-left: 10px; */
+    /* max-height: 75vh; */
+}
+.productGrid {
+    /* background-color: rgba(18, 47, 76, 0.765); */
+    display: grid;
+    grid-template-columns: 50% 20% 30%;
+    /* grid-template-rows: ; */
+    /* column-gap: 10px; */
+    /* color: white; */
+    /* padding: 20px;
+    padding-left: 10px; */
+    /* max-height: 75vh; */
+}
+
+.productGrid * {
+    border: 1px solid white;
+}
+
+.travel {
+    font-size: 90%;
 }
 
 #scoreBoard {
     /* width: 50%; */
     /* height: 33vh; */
     border: 5px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
@@ -44,6 +88,11 @@ body {
 }
 
 #availableProduct {
+    border: 2px solid red;
+    text-align: center;
+}
+
+#productOnHand {
     border: 2px solid red;
     text-align: center;
 }
@@ -74,8 +123,8 @@ td, th {
 }
 
 p {
-    border: 1px solid pink;
-    margin: 20px;
+    /* border: 1px solid pink; */
+    padding: 10px 20px;
 }
 
 button {

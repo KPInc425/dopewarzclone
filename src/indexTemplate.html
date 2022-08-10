@@ -11,7 +11,7 @@
     <div id="gameContainer">
         <div id="headerImgContainer"></div>
         <!-- <img src="./D5zdtk0.jpeg" alt="Image Of Current Location" id="locationImage"> -->
-        <div class="grid">
+        <div class="topGrid">
             <div id="scoreBoard">
                 <div id="cashScoreContainer" class="flexContainer">
                     <p class="resourceLabel">Cash:</p><p class="resourceAmount" id="cashDisplay">$0</p>
@@ -26,11 +26,11 @@
                     <p class="resourceLabel">Guns:</p><p class="resourceAmount" id="gunDisplay">0</p>
                 </div>
                 <div id="healthScoreContainer" class="flexContainer">
-                    <p class="resourceLabel">Health:</p><p class="resourceAmount" id="healthDisplay">0%</p>
+                    <p class="resourceLabel">Health:</p><p class="resourceAmount" id="healthDisplay">0hp</p>
                 </div>
             </div>
             <form id="inputButtons" action="#" method="get" >
-                <fieldset>
+                <fieldset class="travel">
                     <legend>Traveling <span id="cuurentTransportMethod">TRANSPERTATIONMETHOD</span> from <span id="currentLocation">CURRENTLOCATION</span></legend>
                     <div class="grid">
                         <button id="Location1">Location #1</button>
@@ -41,20 +41,20 @@
                         <button id="Location6">Location #6</button>
                     </div>
                 </fieldset>
-                <fieldset class="flexContainer">
+                <fieldset class="flexContainer luxeryDealer">
                     <legend>Luxury Dealer</legend>
                     <button>Real Estate</button>
                     <button>Transportation Vehciles</button>
                     <button>Black Market</button>
                 </fieldset>
-                <fieldset class="flexContainer">
+                <fieldset class="flexContainer finances">
                     <legend>Finances</legend>
                     <button>Bank</button>
                     <button>Stocks</button>
                     <button>Crypto</button>
                     <button>Loan Sharks</button>
                 </fieldset>
-                <fieldset class="flexContainer">
+                <fieldset class="flexContainer playerActions">
                     <legend>Player Actions</legend>
                     <button>Buy</button>
                     <button>Sell</button>
@@ -63,83 +63,30 @@
                 </fieldset>
             </form>
             <div id="availableProduct">
-                <h3>Available Product:</h1>
-                <table>
-                    <tr>
-                        <th>Product Name</th>
-                        <th data-product-price="">Price</th>
-                        <th>QTY</th>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name</td>
-                        <td>PRICE</td>
-                        <td>QTY</td>
-                    </tr>
-                   
-                </table>
+                <h3>Available Product:</h3>
+                <div class="productGrid">
+                    <div class="productName"><p>Product Name</p></div>
+                    <div class="productQty"><p>QTY</p></div>
+                    <div class="productPrice"><p>PRICE</p></div>
+                </div>
+                <div class="availableProductContainer">
+
+                </div>
             </div>
-            <div id="availableProduct">
-                <h3>Inventory: STORAGETYPE</h1>
-                <table>
-                    <tr>
-                        <th>Product</th>
-                        <th>QTY</th>
-                        <th>Price</th>
-                    </tr>
-                </table>
+            <div id="productOnHand">
+                <h3>Inventory: STORAGETYPE</h3>
+                <div class="productGrid">
+                    <div class="productName"><p>Product Name</p></div>
+                    <div class="productQty"><p>QTY</p></div>
+                    <div class="productPrice"><p>PRICE</p></div>
+                </div>
+                <div class="productOnHandContainer">
+
+                </div>
             </div>
+            <button id="btnNewGame">NewGame</button><button>Exit</button>
         </div>
-        <button id="btnNewGame">NewGame</button><button>Exit</button>
+        <!-- <button id="btnNewGame">NewGame</button><button>Exit</button> -->
     </div>
 </body>
 </html>

@@ -1,9 +1,7 @@
-import player from "./player.js";
-
-const updateHealthDisplay = () => {
+const updateHealthDisplay = (currentHealth) => {
     const healthDisplay = document.getElementById('healthDisplay');
     console.log(healthDisplay);
-    healthDisplay.innerText = `${player.health}%`
+    healthDisplay.innerText = `${currentHealth}hp`
 }
 
 export default updateHealthDisplay;

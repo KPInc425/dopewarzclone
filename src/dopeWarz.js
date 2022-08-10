@@ -1,3 +1,4 @@
+import './reset.css';
 import './styles.css';
 // import './D5zdtk0.jpeg';
 import createDrug from './createDrug.js';
@@ -8,7 +9,6 @@ import checkLuck from './checkLuck.js';
 import qualityCheck from './qualityCheck.js';
 import priceRange from './priceRange.js';
 import travelLocal from './travelLocal.js';
-import createPlayer from './player.js';
 import updateLocationDisplay from './updateLocationDisplay.js';
 import updateTransportationMethodDisplay from './updateTransportMethodDisplay.js';
 import updateCurrencyDisplay from './updateCurrencyDisplay.js';
@@ -478,37 +478,37 @@ import el_btnNewGame from './el_newGame';
         quality: "None",
     }];
 
-    // Default Drug List
-    const drugList = [
-        {
-            name: "Cannabis Flower",
-            price: 10,
-        },
-        {
-            name: "Cannabis Extract",
-            price: 30,
-        },
-        {
-            name: "Acid",
-            price: 15,
-        },
-        {
-            name: "Cocaine",
-            price: 120,
-        },
-        {
-            name: "Crack",
-            price: 70,
-        },
-        {
-            name: "Heroin",
-            price: 95,
-        },
-        {
-            name: "Methamphetamine",
-            price: 50,
-        },
-    ];
+    // // Default Drug List
+    // const drugList = [
+    //     {
+    //         name: "Cannabis Flower",
+    //         price: 10,
+    //     },
+    //     {
+    //         name: "Cannabis Extract",
+    //         price: 30,
+    //     },
+    //     {
+    //         name: "Acid",
+    //         price: 15,
+    //     },
+    //     {
+    //         name: "Cocaine",
+    //         price: 120,
+    //     },
+    //     {
+    //         name: "Crack",
+    //         price: 70,
+    //     },
+    //     {
+    //         name: "Heroin",
+    //         price: 95,
+    //     },
+    //     {
+    //         name: "Methamphetamine",
+    //         price: 50,
+    //     },
+    // ];
 
 
     const changeHealth = (change) => {
@@ -525,26 +525,26 @@ import el_btnNewGame from './el_newGame';
 
     // travelLocal(`KP's House`);
     //Initialize display player defaults
-    const init = () => { 
-        let player1 = createPlayer(20,200,50000,20000,50000);
-        updateLocationDisplay(player1.playerData.currentLocal);
-        updateTransportationMethodDisplay(player1.playerData.currentTransportMethod);
-        updateCurrencyDisplay('cashDisplay', player1.playerData.cashOnHand);
-        console.log(player1.playerData.bankAccount);
-        updateCurrencyDisplay('bankDisplay', player1.playerData.bankAccount);
-        updateCurrencyDisplay('debtDisplay', player1.playerData.debt);
-        updateHealthDisplay(player1.playerData.health);
-        el_btnNewGame();
-    }
+    // const init = () => { 
+    //     let player1 = createPlayer("KPInc425",20,200,50000,20000,50000);
+    //     updateLocationDisplay(player1.playerData.currentLocal);
+    //     updateTransportationMethodDisplay(player1.playerData.currentTransportMethod);
+    //     updateCurrencyDisplay('cashDisplay', player1.playerData.cashOnHand);
+    //     console.log(player1.playerData.bankAccount);
+    //     updateCurrencyDisplay('bankDisplay', player1.playerData.bankAccount);
+    //     updateCurrencyDisplay('debtDisplay', player1.playerData.debt);
+    //     updateHealthDisplay(player1.playerData.health);
+    //     el_btnNewGame();
+    // }
 
-    init();
+    el_btnNewGame();
     
 
-    // Testing
-    let price = drugList[1].price;
-    const addedItem = { "name": "Cannabis Flower","price": 10, "quantity": 10, "quality": 3};
-    const removedItem = { "name": "Cannabis Flower","price": 10, "quantity": 10, "quality": 3};
-    console.log(addedItem);
-    // Testing
+    // // Testing
+    // let price = drugList[1].price;
+    // const addedItem = { "name": "Cannabis Flower","price": 10, "quantity": 10, "quality": 3};
+    // const removedItem = { "name": "Cannabis Flower","price": 10, "quantity": 10, "quality": 3};
+    // console.log(addedItem);
+    // // Testing
 
 // })();
