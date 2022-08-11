@@ -1,17 +1,20 @@
 import addDrugsToInventory from './addDrugsToInventory';
-import player from './player';
 import changeMoney from './changeMoney';
+import { getPlayer1 } from './globalVariable';
+import updateCurrencyDisplay from './updateCurrencyDisplay';
 
 // Buy items Locally with Cash
 const buyItemsWithCash = (addedItem, vendor, avgQuality) => {
+    let player = getPlayer1();
+    console.log(player);
     let totalPrice = addedItem.price * addedItem.quantity;
-    if (totalPrice > player.cashOnHand) {
+    if (totalPrice > player.playerData.cashOnHand) {
         console.log("Too Broke!");
     } else {
-        console.log(`Purchased ${addedItem.quantity} of ${addedItem.name} from ${vendor} in ${player.currentLocal}`)
+        console.log(`Purchased ${addedItem.quantity} of ${addedItem.name} from ${vendor} in ${player.playerData.currentLocal}`)
         // Didn't working changing money in changemoney function?
-        player.cashOnHand = changeMoney(player.cashOnHand, -totalPrice);
-
+        player.playerData.cashOnHand = changeMoney(player.playerData.cashOnHand, -totalPrice);
+        updateCurrencyDisplay('cashDisplay', player.playerData.cashOnHand);
         // Possible event goes here
         //if event goes well
             // Add drugs to inventory

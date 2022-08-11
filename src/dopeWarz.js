@@ -471,12 +471,12 @@ import el_btnNewGame from './el_newGame';
     // }
 
     // Player Base Inventory 
-    var PLAYERINVENTORY = [{
-        name: "Nothing Here",
-        quantity: 0,
-        price: 0,
-        quality: "None",
-    }];
+    // var PLAYERINVENTORY = [{
+    //     name: "Nothing Here",
+    //     quantity: 0,
+    //     price: 0,
+    //     quality: "None",
+    // }];
 
     // // Default Drug List
     // const drugList = [
@@ -511,15 +511,15 @@ import el_btnNewGame from './el_newGame';
     // ];
 
 
-    const changeHealth = (change) => {
-        player.health += change;
-        console.log(`Player Health: ${player.health}`);
-    }
+    // const changeHealth = (change) => {
+    //     player.health += change;
+    //     console.log(`Player Health: ${player.health}`);
+    // }
 
-    const updateHealthDisplay = (currentHealth) => {
-        const healthDisplay = document.getElementById('healthDisplay');
-        healthDisplay.textContent = `${currentHealth}%`;
-    }
+    // const updateHealthDisplay = (currentHealth) => {
+    //     const healthDisplay = document.getElementById('healthDisplay');
+    //     healthDisplay.textContent = `${currentHealth}%`;
+    // }
 
 
 

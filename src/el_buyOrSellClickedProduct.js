@@ -1,3 +1,5 @@
+import displayBuySellUI from "./displayBuySellUI";
+
 const el_buyOrSellClickedProduct = () => {
     const productNodeList = document.querySelectorAll('.availableProductData');
 
@@ -11,6 +13,8 @@ const el_buyOrSellClickedProduct = () => {
             console.log(productQty);
             let productPrice = node.querySelector('.productPrice > p').textContent;
             console.log(productPrice);
+
+            displayBuySellUI(productName, productQty, productPrice);
         })
     })
 }

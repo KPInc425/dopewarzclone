@@ -15,17 +15,31 @@ const createPlayer = (...args) => {
         luckLevel : args[10] || 1,  
         currentLocationCity: args[11] || "Seattle, WA" ,
         currentLocal: args[12] || "Capitol Hill",
-        currentTransportMethod: args[13] || "on the Bus",     
-    };
+        currentTransportMethod: args[13] || "on the Bus", 
+        playerInventory: [{
+            name: "Nothing Here",
+            quantity: 0,
+            price: 0,
+            quality: "None",    
+        }],
+    }
 
     const changeHealth = (change) => {
         playerData.health += change;
         console.log(`Player Health: ${playerData.health}`);
     }
 
+    const playerInventory = [{
+        name: "Nothing Here",
+        quantity: 0,
+        price: 0,
+        quality: "None",
+    }];
+
     return {
         playerData,
         changeHealth,
+        playerInventory,
     }
 }
 
