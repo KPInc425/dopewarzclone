@@ -133,3 +133,8 @@ button {
     width: 100%;
     justify-self: center;
 }
+
+.availableProductData:hover {
+    background-color: rgb(160, 138, 15);
+    color: blue;
+}

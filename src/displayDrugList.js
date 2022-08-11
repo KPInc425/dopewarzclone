@@ -1,4 +1,5 @@
 import { defaultDrugList } from "./drugFunctions";
+import el_buyOrSellClickedProduct from "./el_buyOrSellClickedProduct";
 
 const displayDrugBuySellList = () => {
     const availableProductContainer = document.querySelector('.availableProductContainer');
@@ -44,6 +45,7 @@ const displayDrugBuySellList = () => {
 
         availableProductContainer.appendChild(drugDataContainer);
     })
+    el_buyOrSellClickedProduct();
 
     
 }
