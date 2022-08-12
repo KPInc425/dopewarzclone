@@ -1,5 +1,7 @@
 import buyItemsWithCash from "./buyItemsWithCash";
 import createDrug from "./createDrug";
+import { getProductQtyFromInventory } from "./drugFunctions";
+import { getProductQtyFromPlayerInventory } from "./player";
 import sellItemsForCash from "./sellItemsForCash";
 
 const displayBuySellUI = (productName, productQty, productPrice) => {
@@ -36,12 +38,19 @@ const displayBuySellUI = (productName, productQty, productPrice) => {
     const inputBuyProduct = document.createElement('input');
     inputBuyProduct.type = 'number';
     inputBuyProduct.min = 1;
-    inputBuyProduct.max = productQty;
+    inputBuyProduct.value = 1;
+    inputBuyProduct.max = getProductQtyFromInventory(productName);
 
     const inputSellProduct = document.createElement('input');
     inputSellProduct.type = 'number';
     inputSellProduct.min = 1;
-    // inputSellProduct.max = getProductQtyFromInventory();
+    inputSellProduct.value = 1;
+    let maxProductToSell = getProductQtyFromPlayerInventory(productName);
+    inputSellProduct.max = maxProductToSell;
+    if (maxProductToSell === 0) {
+        inputSellProduct.min = 0;
+        inputSellProduct.value = 0;
+    }
 
     const btnBuyProduct = document.createElement('button');
     btnBuyProduct.classList.add('btnBuy');

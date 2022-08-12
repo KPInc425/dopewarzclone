@@ -82,16 +82,24 @@ const setCurrentDrugList = (drugList) => {
 const getCurrentDrugList = () => {
     return currentDrugList;
 }
-// const getDrugList = (drugList) => {
-//     if (drugList != undefined) {
 
-//     }
-// }
+const getProductQtyFromInventory = (drugName) => {
+    console.log(drugName);
+    for (let drug of currentDrugList) {
+        console.log(drug);
+        if (drug.name === drugName) {
+            console.log(drug.quantity);
+            return drug.quantity;
+        }
+    }
+
+}
 
 export {
     defaultDrugList,
     createDrugList,
     editVendorDrugQty,
     setCurrentDrugList,
-    getCurrentDrugList
+    getCurrentDrugList,
+    getProductQtyFromInventory,
 }

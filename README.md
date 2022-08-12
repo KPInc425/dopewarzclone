@@ -8,7 +8,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 
-
+-Finish Selling Product for cash logic to match new Buy product logic
 -Dump Function
 -Travel Function
 -Store Function
@@ -25,6 +25,10 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 -Random Events
 -Flesh out buyitemswithcash function
+
+??? Bugs ???
+-buy/sell value can manually be input to above/below max/mix product quanitity
+--Make input value reset to max or min when trying to input outside of limits
 
 --possible mechanics--
 

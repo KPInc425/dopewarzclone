@@ -57,9 +57,22 @@ const getPlayer1 = () => {
     return player1;
 }
 
+const getProductQtyFromPlayerInventory = (drugName) => {
+    console.log(drugName);
+    for (let drug of player1.playerData.playerInventory) {
+        console.log(drug);
+        if (drug.name === drugName) {
+            console.log(drug.quantity);
+            return drug.quantity;
+        } else {
+            return 0;
+        }
+    }
+}
 
 export {
     createPlayer, 
     setPlayer1,
     getPlayer1,
+    getProductQtyFromPlayerInventory,
 }
