@@ -21,7 +21,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 -add sold quantity of product to vendors inventory and mark up the price by 20-200%
 
--Add 
+-Add buyMax/sellMax buttons
 
 -Random Events
 -Flesh out buyitemswithcash function

@@ -1,5 +1,5 @@
 import removeDrugsFromInventory from './removeDrugsFromInventory.js';
-import { getPlayer1 } from './globalVariable';
+import { getPlayer1 } from './player.js';
 import changeMoney from './changeMoney.js';
 import updateCurrencyDisplay from './updateCurrencyDisplay.js';
 

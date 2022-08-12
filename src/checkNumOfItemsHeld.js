@@ -1,4 +1,4 @@
-import { getPlayer1 } from "./globalVariable";
+import { getPlayer1 } from "./player.js";
 
 // Check Player inventory for total items held
 const checkNumOfItemsHeld = () => {

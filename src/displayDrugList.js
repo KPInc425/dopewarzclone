@@ -1,5 +1,5 @@
 import el_buyOrSellClickedProduct from "./el_buyOrSellClickedProduct";
-import { getPlayer1 } from "./globalVariable.js";
+import { getPlayer1 } from "./player.js";
 
 const displayDrugBuySellList = (drugList) => {
     const availableProductContainer = document.querySelector('.availableProductContainer');

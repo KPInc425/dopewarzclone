@@ -3,12 +3,14 @@ import changeMoney from './changeMoney';
 import createDrug from './createDrug';
 import { displayPlayerDrugInventory } from './displayDrugList';
 import { editVendorDrugQty } from './drugFunctions';
-import { getPlayer1 } from './globalVariable';
+import { getPlayer1 } from './player.js';
 import updateCurrencyDisplay from './updateCurrencyDisplay';
 
 // Buy items Locally with Cash
 const buyItemsWithCash = (addedItem, vendor, avgQuality) => {
     let player = getPlayer1();
+    vendor = vendor || 'Local Dealer';
+    avgQuality = avgQuality || 5.0;
     // console.log(player);
     let totalPrice = addedItem.price * addedItem.quantity;
     if (totalPrice > player.playerData.cashOnHand) {
@@ -23,7 +25,7 @@ const buyItemsWithCash = (addedItem, vendor, avgQuality) => {
 
         let newQty = clickedDrugQtyContainer.textContent - addedItem.quantity;
 
-        let vendorDrug = createDrug(addedItem.name, addedItem.price, newQty);
+        let vendorDrug = createDrug(addedItem.name, addedItem.price, newQty, avgQuality);
         // console.log(vendorDrug);
         // console.log(addedItem);
         clickedDrugQtyContainer.textContent = vendorDrug.quantity

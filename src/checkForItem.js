@@ -1,4 +1,4 @@
-import { getPlayer1 } from "./globalVariable";
+import { getPlayer1 } from "./player.js";
 
 // Check inventory for Item helper function
 const checkForItem = (itemToCheck) => {

@@ -1,17 +1,6 @@
 import './reset.css';
 import './styles.css';
 // import './D5zdtk0.jpeg';
-import createDrug from './createDrug.js';
-import createNonDrugItem from './createNonDrugItem.js';
-import createLocalLocation from './createLocalLocation.js';
-import checkNumOfItemsHeld from './checkNumOfItemsHeld.js';
-import checkLuck from './checkLuck.js';
-import qualityCheck from './qualityCheck.js';
-import priceRange from './priceRange.js';
-import travelLocal from './travelLocal.js';
-import updateLocationDisplay from './updateLocationDisplay.js';
-import updateTransportationMethodDisplay from './updateTransportMethodDisplay.js';
-import updateCurrencyDisplay from './updateCurrencyDisplay.js';
 import el_btnNewGame from './el_newGame';
 
 
@@ -453,75 +442,6 @@ import el_btnNewGame from './el_newGame';
             ],
         },
     ]
-
-    // // Player Variables
-    // let player = {
-    //     maxItems : 100,
-    //     currentNumOfItems : 0,
-    //     lostDrugs : [],
-    //     cashOnHand : 0,
-    //     bankAccount : 0,
-    //     debt : 0,
-    //     currentDay : 1,
-    //     maxDays : 30,
-    //     health : 100,
-    //     luckLevel : 1, 
-    //     currentLocationCity: "Seattle, WA",
-    //     currentLocal: "Capitol Hill",
-    // }
-
-    // Player Base Inventory 
-    // var PLAYERINVENTORY = [{
-    //     name: "Nothing Here",
-    //     quantity: 0,
-    //     price: 0,
-    //     quality: "None",
-    // }];
-
-    // // Default Drug List
-    // const drugList = [
-    //     {
-    //         name: "Cannabis Flower",
-    //         price: 10,
-    //     },
-    //     {
-    //         name: "Cannabis Extract",
-    //         price: 30,
-    //     },
-    //     {
-    //         name: "Acid",
-    //         price: 15,
-    //     },
-    //     {
-    //         name: "Cocaine",
-    //         price: 120,
-    //     },
-    //     {
-    //         name: "Crack",
-    //         price: 70,
-    //     },
-    //     {
-    //         name: "Heroin",
-    //         price: 95,
-    //     },
-    //     {
-    //         name: "Methamphetamine",
-    //         price: 50,
-    //     },
-    // ];
-
-
-    // const changeHealth = (change) => {
-    //     player.health += change;
-    //     console.log(`Player Health: ${player.health}`);
-    // }
-
-    // const updateHealthDisplay = (currentHealth) => {
-    //     const healthDisplay = document.getElementById('healthDisplay');
-    //     healthDisplay.textContent = `${currentHealth}%`;
-    // }
-
-
 
     // travelLocal(`KP's House`);
     //Initialize display player defaults

@@ -1,4 +1,6 @@
 // Player Variables
+let player1;
+
 const createPlayer = (...args) => {
     let playerData = {
         name : args[0] || "That Dope Guy",
@@ -36,6 +38,8 @@ const createPlayer = (...args) => {
         quality: "None",
     }];
 
+// playerName, currentDay, maxDays, cashOnHand, bankAccount, debt
+
     return {
         playerData,
         changeHealth,
@@ -43,5 +47,19 @@ const createPlayer = (...args) => {
     }
 }
 
+const setPlayer1 = (...args) => {
+    if (args.length < 1) {
+        player1 = createPlayer("KPInc425",20,20000,50000,20000,50000);
+    }
+}
 
-export default createPlayer;
+const getPlayer1 = () => {
+    return player1;
+}
+
+
+export {
+    createPlayer, 
+    setPlayer1,
+    getPlayer1,
+}

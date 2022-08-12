@@ -1,6 +1,6 @@
 import checkForItem from "./checkForItem";
 import createDrug from "./createDrug";
-import { getPlayer1 } from "./globalVariable";
+import { getPlayer1 } from "./player.js";
 
 // Remove Item from Inventory Function
 const removeDrugsFromInventory = (removedItem) => {

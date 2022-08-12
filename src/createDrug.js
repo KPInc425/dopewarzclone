@@ -1,3 +1,4 @@
+/* eslint-disable no-self-assign */
 // Drug Factory Function
 const createDrug = (name, price, quantity, quality) => {
     name = name;            // Street Name
@@ -14,6 +15,7 @@ const createDrug = (name, price, quantity, quality) => {
         quantity,
         price,
         quality,
+        info,
     }
 };
 

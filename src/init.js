@@ -4,7 +4,7 @@ import updateTransportationMethodDisplay from './updateTransportMethodDisplay.js
 import updateCurrencyDisplay from './updateCurrencyDisplay.js';
 import updateHealthDisplay from './updateHealthDisplay.js';
 import { displayDrugBuySellList, displayPlayerDrugInventory } from './displayDrugList.js';
-import { getPlayer1, setPlayer1 } from './globalVariable.js';
+import { getPlayer1, setPlayer1 } from './player.js';
 import { createDrugList, setCurrentDrugList } from './drugFunctions.js';
 
 const init = () => { 
