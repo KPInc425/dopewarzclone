@@ -1,5 +1,5 @@
 const updateTransportationMethodDisplay = (TransportMethod) => {
-    const transportationMethodDisplay = document.getElementById('cuurentTransportMethod');
+    const transportationMethodDisplay = document.getElementById('currentTransportMethod');
     // console.log(transportationMethodDisplay);
     transportationMethodDisplay.innerText = TransportMethod;
 }

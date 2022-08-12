@@ -43,9 +43,10 @@ h3 {
 
 .grid {
     /* background-color: rgba(18, 47, 76, 0.765); */
+    /* border: 2px solid green; */
     display: grid;
-    grid-template-columns: 50% 50%;
-    /* grid-template-rows: ; */
+    grid-template-columns: 49% 49%;
+    grid-template-rows: auto;
     column-gap: 10px;
     /* color: white; */
     /* padding: 20px;
@@ -56,12 +57,10 @@ h3 {
     /* background-color: rgba(18, 47, 76, 0.765); */
     display: grid;
     grid-template-columns: 50% 20% 30%;
-    /* grid-template-rows: ; */
-    /* column-gap: 10px; */
-    /* color: white; */
-    /* padding: 20px;
-    padding-left: 10px; */
-    /* max-height: 75vh; */
+    grid-template-rows: auto;
+    margin: auto;
+    justify-content: center;
+
 }
 
 .productGrid * {
@@ -69,7 +68,8 @@ h3 {
 }
 
 .travel {
-    font-size: 90%;
+    font-size: 95%;
+    border: 2px solid green;
 }
 
 #scoreBoard {
@@ -130,7 +130,7 @@ p {
 button {
     border-radius: 12px;
     padding: 5px;
-    width: 100%;
+    width: 85%;
     justify-self: center;
 }
 
@@ -182,4 +182,8 @@ button {
 
 .labelTotalGain {
     color: green;
+}
+
+#inputButtons {
+    padding: 10px;
 }

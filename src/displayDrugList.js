@@ -55,7 +55,7 @@ const displayPlayerDrugInventory = () => {
     player.playerData.playerInventory.forEach((drug) => {
         let drugDataContainer = document.createElement('div');
         drugDataContainer.classList.add('productGrid');
-        drugDataContainer.classList.add('availableProductData');
+        drugDataContainer.classList.add('playerInventoryData');
 
         let drugNameContainer = document.createElement('div');
         drugNameContainer.classList.add('productName');
