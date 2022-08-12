@@ -1,7 +1,10 @@
+import { getPlayer1 } from "./globalVariable";
+
 // Check inventory for Item helper function
 const checkForItem = (itemToCheck) => {
+    let player = getPlayer1();
     // https://flaviocopes.com/how-to-get-index-in-for-of-loop/
-    for (let [index, item] of PLAYERINVENTORY.entries()) {
+    for (let [index, item] of player.playerData.playerInventory.entries()) {
         if (item.name == itemToCheck.name) {
             console.log("Item found");
             return {

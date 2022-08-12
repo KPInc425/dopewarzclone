@@ -1,6 +1,6 @@
 const updateLocationDisplay = (value) => {
     const locationDisplay = document.getElementById('currentLocation');
-    console.log(locationDisplay);
+    // console.log(locationDisplay);
     locationDisplay.innerText = value;
 }
 

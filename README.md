@@ -8,7 +8,9 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 
--add player inventory to createPlayer factory function
+-Finish drugs buy/sell 
+-Implement module for displaying player inventory
+(-add player inventory to createPlayer factory function)DONE
 -Dump Function
 -Travel Function
 -Store Function
@@ -36,3 +38,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -Player Variables
 -Health Function
 -Implement missing variable for player(health,day,non-drugs,etc.)
+
+==Possible Features==
+-Wiretapping (logging of all events)(used for in game law enforcement, or rivaly events, scoreboard possibilities);
+--Hacking, wipe clean all possibel data law enforcement may have on you

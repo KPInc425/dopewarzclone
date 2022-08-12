@@ -36,8 +36,8 @@ const displayDrugBuySellList = () => {
         } else {
             calculatedPrice = Math.floor(drug.price - ((Math.floor(Math.random() * 20) / 100) * drug.price));
         }
-        console.log(drug.price);
-        console.log(calculatedPrice);
+        // console.log(drug.price);
+        // console.log(calculatedPrice);
         drugPrice.textContent = calculatedPrice;
 
         drugPriceContainer.appendChild(drugPrice);

@@ -1,5 +1,6 @@
 import buyItemsWithCash from "./buyItemsWithCash";
 import createDrug from "./createDrug";
+import sellItemsForCash from "./sellItemsForCash";
 
 const displayBuySellUI = (productName, productQty, productPrice) => {
     const gameContainer = document.getElementById('gameContainer');
@@ -11,7 +12,7 @@ const displayBuySellUI = (productName, productQty, productPrice) => {
     containerBuySellProductHeader.classList.add('buySellUIHeader');
 
     const labelProductName = document.createElement('h2');
-    labelProductName.textContent = productName;
+    labelProductName.textContent = `${productName} at $${productPrice}/g`;
 
     const btnCancel = document.createElement('button');
     btnCancel.classList.add('btnCancel');
@@ -62,8 +63,8 @@ const displayBuySellUI = (productName, productQty, productPrice) => {
 
 
     inputBuyProduct.addEventListener('change', (e) => {
-        console.log(inputBuyProduct.value);
-        console.log(productPrice);
+        // console.log(inputBuyProduct.value);
+        // console.log(productPrice);
         labelTotalCost.textContent = `$${inputBuyProduct.value * productPrice}`;
     })
     inputSellProduct.addEventListener('change', (e) => {
@@ -81,6 +82,10 @@ const displayBuySellUI = (productName, productQty, productPrice) => {
     })
     btnSellProduct.addEventListener('click', () =>{
         console.log('SellProduct');
+        let soldDrug = createDrug(productName, productPrice, inputSellProduct.value);
+        console.log(soldDrug);
+        sellItemsForCash(soldDrug);
+        containerBuySellProduct.remove();
     })
 
 

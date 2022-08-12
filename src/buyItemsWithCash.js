@@ -10,6 +10,7 @@ const buyItemsWithCash = (addedItem, vendor, avgQuality) => {
     let totalPrice = addedItem.price * addedItem.quantity;
     if (totalPrice > player.playerData.cashOnHand) {
         console.log("Too Broke!");
+        alert('Too Broke!');
     } else {
         console.log(`Purchased ${addedItem.quantity} of ${addedItem.name} from ${vendor} in ${player.playerData.currentLocal}`)
         // Didn't working changing money in changemoney function?
