@@ -187,3 +187,8 @@ button {
 #inputButtons {
     padding: 10px;
 }
+
+.hidden {
+    visibility: collapse;
+    display: none;
+}

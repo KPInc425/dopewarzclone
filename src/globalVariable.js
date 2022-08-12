@@ -13,6 +13,14 @@ const getPlayer1 = () => {
     return player1;
 }
 
+const setCurrentDrugList = (drugList) => {
+    currentDrugList = drugList;
+}
+
+const getCurrentDrugList = (drugList) => {
+    return currentDrugList;
+}
+
 export {
     setPlayer1,
     getPlayer1,

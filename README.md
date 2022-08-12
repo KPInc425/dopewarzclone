@@ -17,6 +17,12 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -Change buy/sell buttons to other actions as functionality has changed to click the drug.
 --Airport Function
 
+-add onchange event to qty containers for available product and greyOut or remove/hide element with 0 qty left
+
+-add sold quantity of product to vendors inventory and mark up the price by 20-200%
+
+-Add 
+
 -Random Events
 -Flesh out buyitemswithcash function
 

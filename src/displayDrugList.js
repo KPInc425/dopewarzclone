@@ -1,15 +1,18 @@
-import { defaultDrugList } from "./drugFunctions";
 import el_buyOrSellClickedProduct from "./el_buyOrSellClickedProduct";
 import { getPlayer1 } from "./globalVariable.js";
 
-const displayDrugBuySellList = () => {
+const displayDrugBuySellList = (drugList) => {
     const availableProductContainer = document.querySelector('.availableProductContainer');
     availableProductContainer.innerHTML = "";
     // MAKE THIS MORE DYNAMIC TO TAKE ANY DRUGLIST
     // get drugList 
-    defaultDrugList.forEach((drug) => {
+    // const drugList = createDrugList();
+    drugList.forEach((drug) => {
         let drugDataContainer = document.createElement('div');
         drugDataContainer.classList.add('productGrid');
+        if (drug.quantity == 0) {
+            drugDataContainer.classList.add('hidden');
+        }
         drugDataContainer.classList.add('availableProductData');
         drugDataContainer.classList.add(`container${drug.name.replace(" ", "")}`);
 
@@ -24,7 +27,7 @@ const displayDrugBuySellList = () => {
         let drugQtyContainer = document.createElement('div');
         drugQtyContainer.classList.add('productQty');
         let drugQty = document.createElement('p');
-        drugQty.textContent = Math.floor(Math.random() * 100);
+        drugQty.textContent = drug.quantity;
 
         drugQtyContainer.appendChild(drugQty);
         drugDataContainer.appendChild(drugQtyContainer);
@@ -32,14 +35,7 @@ const displayDrugBuySellList = () => {
         let drugPriceContainer = document.createElement('div');
         drugPriceContainer.classList.add('productPrice');
         let drugPrice = document.createElement('p');
-        let coinFlip = Math.floor(Math.random() * 100);
-        let calculatedPrice;
-        if (coinFlip > 50) {
-            calculatedPrice = Math.floor(drug.price + ((Math.floor(Math.random() * 20) / 100) * drug.price));
-        } else {
-            calculatedPrice = Math.floor(drug.price - ((Math.floor(Math.random() * 20) / 100) * drug.price));
-        }
-        drugPrice.textContent = calculatedPrice;
+        drugPrice.textContent = drug.price;
 
         drugPriceContainer.appendChild(drugPrice);
         drugDataContainer.appendChild(drugPriceContainer);
@@ -78,14 +74,8 @@ const displayPlayerDrugInventory = () => {
         let drugPriceContainer = document.createElement('div');
         drugPriceContainer.classList.add('productPrice');
         let drugPrice = document.createElement('p');
-        let coinFlip = Math.floor(Math.random() * 100);
-        let calculatedPrice;
-        if (coinFlip > 50) {
-            calculatedPrice = Math.floor(drug.price + ((Math.floor(Math.random() * 20) / 100) * drug.price));
-        } else {
-            calculatedPrice = Math.floor(drug.price - ((Math.floor(Math.random() * 20) / 100) * drug.price));
-        }
-        drugPrice.textContent = calculatedPrice;
+
+        drugPrice.textContent = drug.price;
 
         drugPriceContainer.appendChild(drugPrice);
         drugDataContainer.appendChild(drugPriceContainer);

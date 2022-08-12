@@ -5,10 +5,13 @@ import updateCurrencyDisplay from './updateCurrencyDisplay.js';
 import updateHealthDisplay from './updateHealthDisplay.js';
 import { displayDrugBuySellList, displayPlayerDrugInventory } from './displayDrugList.js';
 import { getPlayer1, setPlayer1 } from './globalVariable.js';
+import { createDrugList, setCurrentDrugList } from './drugFunctions.js';
 
 const init = () => { 
     setPlayer1();
     let player = getPlayer1();
+    const firstDrugList = createDrugList();
+    setCurrentDrugList(firstDrugList);
     // console.log(player);
 
     // let welcomMessage1 = `What is up my new friend!? ${player1.playerData.name} is the ` +
@@ -31,7 +34,8 @@ const init = () => {
     updateCurrencyDisplay('debtDisplay', player.playerData.debt);
     updateHealthDisplay(player.playerData.health);
 
-    displayDrugBuySellList();
+    
+    displayDrugBuySellList(firstDrugList);
     displayPlayerDrugInventory();
 }
 

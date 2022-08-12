@@ -5,14 +5,14 @@ const el_buyOrSellClickedProduct = () => {
 
     productNodeList.forEach((node) => {
         node.addEventListener('click', (e) => {
-            console.log('click');
-            console.log(node);
+            // console.log('click');
+            // console.log(node);
             let productName = node.querySelector('.productName > p').textContent;
-            console.log(productName);
+            // console.log(productName);
             let productQty = node.querySelector('.productQty > p').textContent;
-            console.log(productQty);
+            // console.log(productQty);
             let productPrice = node.querySelector('.productPrice > p').textContent;
-            console.log(productPrice);
+            // console.log(productPrice);
 
             displayBuySellUI(productName, productQty, productPrice);
         })
