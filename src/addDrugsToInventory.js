@@ -27,16 +27,16 @@ const addDrugsToInventory = (addedItem) => {
         } else { // No Overflow
             // Check if already holding item
             if (item.name === addedItem.name) {
-                console.log(item.quantity);
+                // console.log(item.quantity);
 
                 // Add addedItem.quantity to total quantity in inventory
                 item.quantity += addedItem.quantity;
-                console.log(item.quantity);
+                // console.log(item.quantity);
 
                 // Replace price with new average price
-                console.log(item.price);
+                // console.log(item.price);
                 item.price = checkPriceAverage(item, addedItem);
-                console.log(item.price);
+                // console.log(item.price);
                 return console.log(player.playerData.playerInventory);
 
               

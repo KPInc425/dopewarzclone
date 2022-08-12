@@ -5,20 +5,12 @@ let player1;
 const setPlayer1 = (...args) => {
     if (args.length < 1) {
         player1 = createPlayer("KPInc425",20,200,50000,20000,50000, ...args);
-    };
+    }
 
 }
 
 const getPlayer1 = () => {
     return player1;
-}
-
-const setCurrentDrugList = (drugList) => {
-    currentDrugList = drugList;
-}
-
-const getCurrentDrugList = (drugList) => {
-    return currentDrugList;
 }
 
 export {

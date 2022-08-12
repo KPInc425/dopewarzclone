@@ -4,7 +4,7 @@ const el_buyOrSellClickedProduct = () => {
     const productNodeList = document.querySelectorAll('.availableProductData');
 
     productNodeList.forEach((node) => {
-        node.addEventListener('click', (e) => {
+        node.addEventListener('click', () => {
             // console.log('click');
             // console.log(node);
             let productName = node.querySelector('.productName > p').textContent;

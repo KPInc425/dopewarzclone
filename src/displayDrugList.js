@@ -4,9 +4,7 @@ import { getPlayer1 } from "./globalVariable.js";
 const displayDrugBuySellList = (drugList) => {
     const availableProductContainer = document.querySelector('.availableProductContainer');
     availableProductContainer.innerHTML = "";
-    // MAKE THIS MORE DYNAMIC TO TAKE ANY DRUGLIST
     // get drugList 
-    // const drugList = createDrugList();
     drugList.forEach((drug) => {
         let drugDataContainer = document.createElement('div');
         drugDataContainer.classList.add('productGrid');
