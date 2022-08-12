@@ -3,7 +3,7 @@ import updateLocationDisplay from './updateLocationDisplay.js';
 import updateTransportationMethodDisplay from './updateTransportMethodDisplay.js';
 import updateCurrencyDisplay from './updateCurrencyDisplay.js';
 import updateHealthDisplay from './updateHealthDisplay.js';
-import { displayDrugBuySellList } from './displayDrugList.js';
+import { displayDrugBuySellList, displayPlayerDrugInventory } from './displayDrugList.js';
 import { getPlayer1, setPlayer1 } from './globalVariable.js';
 
 const init = () => { 
@@ -32,6 +32,7 @@ const init = () => {
     updateHealthDisplay(player.playerData.health);
 
     displayDrugBuySellList();
+    displayPlayerDrugInventory();
 }
 
 export default init;

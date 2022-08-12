@@ -8,7 +8,6 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 
--Finish drugs buy/sell 
 -Implement module for displaying player inventory
 (-add player inventory to createPlayer factory function)DONE
 -Dump Function
