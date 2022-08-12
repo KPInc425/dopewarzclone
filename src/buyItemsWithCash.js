@@ -12,14 +12,17 @@ const buyItemsWithCash = (addedItem, vendor, avgQuality) => {
         console.log("Too Broke!");
         alert('Too Broke!');
     } else {
+        const clickedDrugQtyContainer = document.querySelector(`.container${addedItem.name.replace(" ", "")} .productQty > p`);
         console.log(`Purchased ${addedItem.quantity} of ${addedItem.name} from ${vendor} in ${player.playerData.currentLocal}`)
         // Didn't working changing money in changemoney function?
         player.playerData.cashOnHand = changeMoney(player.playerData.cashOnHand, -totalPrice);
         updateCurrencyDisplay('cashDisplay', player.playerData.cashOnHand);
+        clickedDrugQtyContainer.textContent = clickedDrugQtyContainer.textContent - addedItem.quantity;
         // Possible event goes here
         //if event goes well
             // Add drugs to inventory
             addDrugsToInventory(addedItem);
+
         // else 
             // badEvent Scenario
     }

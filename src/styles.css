@@ -130,7 +130,7 @@ p {
 button {
     border-radius: 12px;
     padding: 5px;
-    width: 85%;
+    width: 100%;
     justify-self: center;
 }
 

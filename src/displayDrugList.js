@@ -4,13 +4,14 @@ import { getPlayer1 } from "./globalVariable.js";
 
 const displayDrugBuySellList = () => {
     const availableProductContainer = document.querySelector('.availableProductContainer');
-    
+    availableProductContainer.innerHTML = "";
     // MAKE THIS MORE DYNAMIC TO TAKE ANY DRUGLIST
     // get drugList 
     defaultDrugList.forEach((drug) => {
         let drugDataContainer = document.createElement('div');
         drugDataContainer.classList.add('productGrid');
         drugDataContainer.classList.add('availableProductData');
+        drugDataContainer.classList.add(`container${drug.name.replace(" ", "")}`);
 
         let drugNameContainer = document.createElement('div');
         drugNameContainer.classList.add('productName');
@@ -51,6 +52,7 @@ const displayDrugBuySellList = () => {
 const displayPlayerDrugInventory = () => {
     let player = getPlayer1();
     const productOnHandContainer = document.querySelector('.productOnHandContainer');
+    productOnHandContainer.innerHTML = "";
 
     player.playerData.playerInventory.forEach((drug) => {
         let drugDataContainer = document.createElement('div');

@@ -30,6 +30,7 @@ const defaultDrugList = [
     },
 ];
 
+
 // const getDrugList = (drugList) => {
 //     if (drugList != undefined) {
 

@@ -75,6 +75,8 @@ const displayBuySellUI = (productName, productQty, productPrice) => {
     })
     btnBuyProduct.addEventListener('click', () =>{
         console.log('BuyProduct');
+        // const clickedDrugContainer = document.querySelector(`.container${productName.replace(" ", "")}`)
+
         let boughtDrug = createDrug(productName, productPrice, inputBuyProduct.value);
         console.log(boughtDrug);
         buyItemsWithCash(boughtDrug)
