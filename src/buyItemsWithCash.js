@@ -20,21 +20,21 @@ const buyItemsWithCash = (addedItem, vendor, avgQuality) => {
         const clickedDrugQtyContainer = document.querySelector(`.container${addedItem.name.replace(" ", "")} .productQty > p`);
         // console.log(`Purchased ${addedItem.quantity} of ${addedItem.name} from ${vendor} in ${player.playerData.currentLocal}`)
         // Didn't working changing money in changemoney function?
-        player.playerData.cashOnHand = changeMoney(player.playerData.cashOnHand, -totalPrice);
-        updateCurrencyDisplay('cashDisplay', player.playerData.cashOnHand);
-
         let newQty = clickedDrugQtyContainer.textContent - addedItem.quantity;
+        let enoughRoom = addDrugsToInventory(addedItem);
+        if (enoughRoom) {
+            let vendorDrug = createDrug(addedItem.name, addedItem.price, newQty, avgQuality);
+            editVendorDrugQty(vendorDrug);
+            clickedDrugQtyContainer.textContent = vendorDrug.quantity
+            player.playerData.cashOnHand = changeMoney(player.playerData.cashOnHand, -totalPrice);
+            updateCurrencyDisplay('cashDisplay', player.playerData.cashOnHand);
+        }
 
-        let vendorDrug = createDrug(addedItem.name, addedItem.price, newQty, avgQuality);
-        // console.log(vendorDrug);
-        // console.log(addedItem);
-        clickedDrugQtyContainer.textContent = vendorDrug.quantity
 
         // Possible event goes here
         //if event goes well
             // Add drugs to inventory
-            editVendorDrugQty(vendorDrug);
-            addDrugsToInventory(addedItem);
+
 
         // else 
             // badEvent Scenario

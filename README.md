@@ -9,6 +9,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 --ToDo--
 
 -Finish Selling Product for cash logic to match new Buy product logic
+-Add inventoryTotal label somewhere
 -Dump Function
 -Travel Function
 -Store Function

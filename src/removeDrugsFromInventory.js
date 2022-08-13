@@ -9,6 +9,7 @@ const removeDrugsFromInventory = (removedItem) => {
     let foundItem = checkForItem(removedItem);
 
     if (foundItem === null) {
+        alert("You reach into your pockets and realize you've made a mistake...")
         console.log("You don't own this item.");
         return 0;
     }
@@ -26,7 +27,9 @@ const removeDrugsFromInventory = (removedItem) => {
         console.log("vvv Player Inventory vvv")
         console.log(player.playerData.playerInventory);
         // Re-add placeholder for empty inventory
-        player.playerData.playerInventory.push(createDrug("Nothing Here", 0, 0, 0));
+        if (player.playerData.currentNumOfItems < 1) {
+            player.playerData.playerInventory.push(createDrug("Nothing Here", 0, 0, 0));
+        }
         return 1;
     } else {
         console.log(`Item Quantity: ${item.quantity}`);
