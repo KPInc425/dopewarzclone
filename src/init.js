@@ -6,6 +6,7 @@ import updateHealthDisplay from './updateHealthDisplay.js';
 import { displayDrugBuySellList, displayPlayerDrugInventory } from './displayDrugList.js';
 import { getPlayer1, setPlayer1 } from './player.js';
 import { createDrugList, setCurrentDrugList } from './drugFunctions.js';
+import { updateTravelButtons } from './updateTravelButtons.js';
 
 const init = () => { 
     setPlayer1();
@@ -28,11 +29,13 @@ const init = () => {
 
     updateLocationDisplay(player.playerData.currentLocal);
     updateTransportationMethodDisplay(player.playerData.currentTransportMethod);
+    updateTravelButtons(player.playerData.currentLocationCity);
     updateCurrencyDisplay('cashDisplay', player.playerData.cashOnHand);
     // console.log(player.playerData.bankAccount);
     updateCurrencyDisplay('bankDisplay', player.playerData.bankAccount);
     updateCurrencyDisplay('debtDisplay', player.playerData.debt);
     updateHealthDisplay(player.playerData.health);
+
 
     
     displayDrugBuySellList(firstDrugList);
