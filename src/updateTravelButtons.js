@@ -1,3 +1,4 @@
+import travelLocal from "./travelLocal";
 
 // Default City Location
 const locationCities = [
@@ -439,9 +440,9 @@ const getLocationsByName = (locationName) => {
     }
 }
 
-const el_travelLocationClicked = () => {
-    
-}
+// const el_travelLocationClicked = () => {
+//     const 
+// }
 
 const updateTravelButtons = (city) => {
     const travelButtonNodeList = document.querySelectorAll('.locationContainer button');
@@ -451,9 +452,13 @@ const updateTravelButtons = (city) => {
     console.log(playerCity);
 
     let i = 0;
-    travelButtonNodeList.forEach((metro) => {
-        metro.textContent = playerCity.locationsLocal[i].locationName;
-        metro.id = playerCity.locationsLocal[i].locationName.replace(' ', '');
+    travelButtonNodeList.forEach((metroBtn) => {
+        metroBtn.textContent = playerCity.locationsLocal[i].locationName;
+        metroBtn.id = playerCity.locationsLocal[i].locationName.replace(' ', '');
+        metroBtn.addEventListener('click', () =>{
+            console.log(metroBtn.textContent);
+            travelLocal(metroBtn.textContent);
+        })
         i++;
     })
 }

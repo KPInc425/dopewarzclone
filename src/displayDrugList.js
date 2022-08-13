@@ -1,7 +1,9 @@
+import { getCurrentDrugList } from "./drugFunctions";
 import el_buyOrSellClickedProduct from "./el_buyOrSellClickedProduct";
 import { getPlayer1 } from "./player.js";
 
-const displayDrugBuySellList = (drugList) => {
+const displayDrugBuySellList = () => {
+    let drugList = getCurrentDrugList();
     const availableProductContainer = document.querySelector('.availableProductContainer');
     availableProductContainer.innerHTML = "";
     // get drugList 
