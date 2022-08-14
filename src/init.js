@@ -15,17 +15,19 @@ const init = () => {
     setCurrentDrugList(firstDrugList);
     // console.log(player);
 
-    // let welcomMessage1 = `What is up my new friend!? ${player1.playerData.name} is the ` +
+    // let welcomMessage1 = `What is up my new friend!? ${player.playerData.name} is the ` +
     //                      "name right? Of course I have heard good things, or we wouldn't " +
     //                      "be conversating here at the moment, would we?";
-    // let welcomeMEssage2 = "Well getting down to business... I don't touch the stuff my " + 
-    //                       "self, but I know a guy and I have this stack of cash here to " +
-    //                       "get you started. Hit up the local dealer and pick up the supplies " +
-    //                       "needed to start your empire my friend! Sky's the limit and the " +
-    //                     "only color we see is GREEEN!!";
+    let welcomMessage1 = "What is up my new friend!? I have heard good things, or we wouldn't " +
+                         "be conversating here at the moment, would we?";
+    let welcomeMEssage2 = "Well getting down to business... I don't touch the stuff my " + 
+                          "self, but I know a guy and I have this stack of cash here to " +
+                          "get you started. Hit up the local dealer and pick up the supplies " +
+                          "needed to start your empire my friend! Sky's the limit and the " +
+                          "only color we see is GREEEN!!";
 
-    // alert(welcomMessage1);
-    // alert(welcomeMEssage2);
+    alert(welcomMessage1);
+    alert(welcomeMEssage2);
 
     updateLocationDisplay(player.playerData.currentLocal);
     updateTransportationMethodDisplay(player.playerData.currentTransportMethod);
