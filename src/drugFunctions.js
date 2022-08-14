@@ -68,7 +68,7 @@ const editVendorDrugQty = (changedDrug) => {
     // console.log(changedDrug);
     currentDrugList.forEach((drug) => {
         if (drug.name === changedDrug.name) {
-            // console.log(drug);
+            console.log(drug);
             drug.quantity = changedDrug.quantity;
             // console.log(drug);
         }
@@ -84,11 +84,11 @@ const getCurrentDrugList = () => {
 }
 
 const getProductQtyFromInventory = (drugName) => {
-    console.log(drugName);
+    // console.log(drugName);
     for (let drug of currentDrugList) {
-        console.log(drug);
+        // console.log(drug);
         if (drug.name === drugName) {
-            console.log(drug.quantity);
+            // console.log(drug.quantity);
             return drug.quantity;
         }
     }

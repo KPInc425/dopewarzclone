@@ -433,7 +433,7 @@ const locationCities = [
 
 const getLocationsByName = (locationName) => {
     for (let location of locationCities) {
-        console.log(location);
+        // console.log(location);
         if (location.cityName == locationName) {
             return location;
         }
@@ -446,17 +446,17 @@ const getLocationsByName = (locationName) => {
 
 const updateTravelButtons = (city) => {
     const travelButtonNodeList = document.querySelectorAll('.locationContainer button');
-    console.log(city);
+    // console.log(city);
     const playerCity = getLocationsByName(city);
-    console.log(travelButtonNodeList);
-    console.log(playerCity);
+    // console.log(travelButtonNodeList);
+    // console.log(playerCity);
 
     let i = 0;
     travelButtonNodeList.forEach((metroBtn) => {
         metroBtn.textContent = playerCity.locationsLocal[i].locationName;
         metroBtn.id = playerCity.locationsLocal[i].locationName.replace(' ', '');
         metroBtn.addEventListener('click', () =>{
-            console.log(metroBtn.textContent);
+            // console.log(metroBtn.textContent);
             travelLocal(metroBtn.textContent);
         })
         i++;

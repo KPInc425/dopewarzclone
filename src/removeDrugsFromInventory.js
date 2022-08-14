@@ -1,4 +1,5 @@
 import checkForItem from "./checkForItem";
+import checkNumOfItemsHeld from "./checkNumOfItemsHeld";
 import createDrug from "./createDrug";
 import { getPlayer1 } from "./player.js";
 
@@ -6,7 +7,11 @@ import { getPlayer1 } from "./player.js";
 const removeDrugsFromInventory = (removedItem) => {
 
     let player = getPlayer1();
+
+    console.log(removedItem);
     let foundItem = checkForItem(removedItem);
+    // console.log(foundItem);
+    console.log(player.playerData.playerInventory);
 
     if (foundItem === null) {
         alert("You reach into your pockets and realize you've made a mistake...")
@@ -25,7 +30,8 @@ const removeDrugsFromInventory = (removedItem) => {
         // Remove object from array if quanitity is 0
         player.playerData.playerInventory.splice(index, 1);
         console.log("vvv Player Inventory vvv")
-        console.log(player.playerData.playerInventory);
+
+        player.playerData.currentNumOfItems = checkNumOfItemsHeld();
         // Re-add placeholder for empty inventory
         if (player.playerData.currentNumOfItems < 1) {
             player.playerData.playerInventory.push(createDrug("Nothing Here", 0, 0, 0));

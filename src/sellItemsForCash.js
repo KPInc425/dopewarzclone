@@ -16,7 +16,7 @@ const sellItemsForCash = (removedItem, currentLocation, vendor, avgQuality) => {
 
     if (saleResult == 1) {
         const clickedDrugQtyContainer = document.querySelector(`.container${removedItem.name.replace(" ", "")} .productQty > p`);
-        let newQty = parseInt(clickedDrugQtyContainer.textContent + removedItem.quantity);
+        let newQty = parseInt(clickedDrugQtyContainer.textContent) + removedItem.quantity;
         console.log(newQty);
         clickedDrugQtyContainer.textContent = newQty;
         editVendorDrugQty(removedItem);

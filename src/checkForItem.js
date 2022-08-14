@@ -13,9 +13,9 @@ const checkForItem = (itemToCheck) => {
                 "index": index,
             }
         }
+    }
     console.log("Item not found.");    
     return null;
-    }
 };
 
 export default checkForItem;

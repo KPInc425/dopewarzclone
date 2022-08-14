@@ -20,7 +20,8 @@ const buyItemsWithCash = (addedItem, vendor, avgQuality) => {
         const clickedDrugQtyContainer = document.querySelector(`.container${addedItem.name.replace(" ", "")} .productQty > p`);
         // console.log(`Purchased ${addedItem.quantity} of ${addedItem.name} from ${vendor} in ${player.playerData.currentLocal}`)
         // Didn't working changing money in changemoney function?
-        let newQty = clickedDrugQtyContainer.textContent - addedItem.quantity;
+        let newQty = parseInt(clickedDrugQtyContainer.textContent - addedItem.quantity);
+        console.log(newQty);
         let enoughRoom = addDrugsToInventory(addedItem);
         if (enoughRoom) {
             let vendorDrug = createDrug(addedItem.name, addedItem.price, newQty, avgQuality);

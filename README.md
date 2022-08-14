@@ -56,3 +56,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 ==Possible Features==
 -Wiretapping (logging of all events)(used for in game law enforcement, or rivaly events, scoreboard possibilities);
 --Hacking, wipe clean all possibel data law enforcement may have on you
+-OverSelling
+--Choose to "sell" more than have in inventory
+--Chance that customer won't notice
+--Warning when trying to sell over physical limit

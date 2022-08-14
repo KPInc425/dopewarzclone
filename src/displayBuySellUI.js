@@ -87,13 +87,13 @@ const displayBuySellUI = (productName, productQty, productPrice) => {
         // const clickedDrugContainer = document.querySelector(`.container${productName.replace(" ", "")}`)
 
         let boughtDrug = createDrug(productName, parseInt(productPrice), parseInt(inputBuyProduct.value));
-        // console.log(boughtDrug);
+        console.log(boughtDrug);
         buyItemsWithCash(boughtDrug)
         containerBuySellProduct.remove();
     })
     btnSellProduct.addEventListener('click', () =>{
         // console.log('SellProduct');
-        let soldDrug = createDrug(productName, productPrice, inputSellProduct.value);
+        let soldDrug = createDrug(productName, parseInt(productPrice), parseInt(inputSellProduct.value));
         console.log(soldDrug);
         sellItemsForCash(soldDrug);
         containerBuySellProduct.remove();
