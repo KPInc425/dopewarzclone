@@ -60,3 +60,6 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 --Choose to "sell" more than have in inventory
 --Chance that customer won't notice
 --Warning when trying to sell over physical limit
+-Modernized theme, phone/laptop app?
+--physical pickup vs digital dropoff?
+--lots of questions and possibilities for uniqueness

@@ -20,7 +20,7 @@ const init = () => {
     //                      "be conversating here at the moment, would we?";
     let welcomMessage1 = "What is up my new friend!? I have heard good things, or we wouldn't " +
                          "be conversating here at the moment, would we?";
-    let welcomeMEssage2 = "Well getting down to business... I don't touch the stuff my " + 
+    let welcomeMEssage2 = "Well, if we're getting down to business... I don't touch the stuff my " + 
                           "self, but I know a guy and I have this stack of cash here to " +
                           "get you started. Hit up the local dealer and pick up the supplies " +
                           "needed to start your empire my friend! Sky's the limit and the " +

@@ -4,20 +4,20 @@ let player1;
 const createPlayer = (...args) => {
     let playerData = {
         name : args[0] || "That Dope Guy",
-        currentDay : args[0] || 1,
-        maxDays : args[1] || 30,
-        cashOnHand : args[2] || 5500,
-        bankAccount : args[3] || 0,
-        debt : args[4] || 5500,
-        guns : args[5] || [],
-        health : args[6] || 100,
-        maxItems : args[7] || 100,
-        currentNumOfItems : args[8] || 0,
-        lostDrugs : args[9]|| [],
-        luckLevel : args[10] || 1,  
-        currentLocationCity: args[11] || "Seattle, WA" ,
-        currentLocal: args[12] || "Capitol Hill",
-        currentTransportMethod: args[13] || "on the Bus", 
+        currentDay : args[1] || 1,
+        maxDays : args[2] || 30,
+        cashOnHand : args[3] || 2000,
+        bankAccount : args[4] || 0,
+        debt : args[5] || 2500,
+        guns : args[6] || [],
+        health : args[7] || 100,
+        maxItems : args[8] || 100,
+        currentNumOfItems : args[9] || 0,
+        lostDrugs : args[10]|| [],
+        luckLevel : args[11] || 1,  
+        currentLocationCity: args[12] || "Seattle, WA" ,
+        currentLocal: args[13] || "Capitol Hill",
+        currentTransportMethod: args[14] || "on the Bus", 
         playerInventory: [{
             name: "Nothing Here",
             quantity: 0,
@@ -49,7 +49,7 @@ const createPlayer = (...args) => {
 
 const setPlayer1 = (...args) => {
     if (args.length < 1) {
-        player1 = createPlayer("KPInc425",20,20000,50000,20000,50000);
+        player1 = createPlayer();
     }
 }
 
