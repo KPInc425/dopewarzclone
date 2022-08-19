@@ -1,5 +1,6 @@
 import { getCurrentDrugList } from "./drugFunctions";
 import el_buyOrSellClickedProduct from "./el_buyOrSellClickedProduct";
+import el_clickedPlayerProduct from "./el_clickPlayerInventoryProduct";
 import { getPlayer1 } from "./player.js";
 
 const displayDrugBuySellList = () => {
@@ -42,6 +43,7 @@ const displayDrugBuySellList = () => {
 
         availableProductContainer.appendChild(drugDataContainer);
     })
+    // Add event listener for clicking product
     el_buyOrSellClickedProduct();
 }
 
@@ -82,6 +84,8 @@ const displayPlayerDrugInventory = () => {
 
         productOnHandContainer.appendChild(drugDataContainer);
     })
+    // Add event listener for clicking product
+    el_clickedPlayerProduct();
 
 }
 

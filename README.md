@@ -8,8 +8,8 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 
--Add inventoryTotal label somewhere
--Dump Function
+
+-Dump All Function
 -Travel Function
 -Store Function
 --Add store button under Player Data
@@ -38,6 +38,10 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -buy/sell value can manually be input to above/below max/mix product quanitity
 --Make input value reset to max or min when trying to input outside of limits
 
+### Recodes ###
+-Consolidate clicking on products EL's just change inputs to [selector] and possibly function to display UI?
+-Add input for targetInventory for add/remove items for inventory to make more modular and easier to add already implemented checks for adding inventory items
+
 --possible mechanics--
 
 -Raids
@@ -52,13 +56,6 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -Tribute to city owning orgs
 -Takeover
 
---Done?--
--Local Travel Function
--Player Variables
--Health Function
--Implement missing variable for player(health,day,non-drugs,etc.)
-(-Implement module for displaying player inventory)DONE
-(-add player inventory to createPlayer factory function)DONE
 
 ==Possible Features==
 -Wiretapping (logging of all events)(used for in game law enforcement, or rivaly events, scoreboard possibilities);

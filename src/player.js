@@ -1,3 +1,9 @@
+import checkForItem from "./checkForItem";
+import createDrug from "./createDrug";
+import displayBuySellUI from "./displayBuySellUI";
+import { displayPlayerDrugInventory } from "./displayDrugList";
+import updateInventoryAmountDisplay from "./updateInventoryAmountDisplay";
+
 // Player Variables
 let player1;
 
@@ -31,19 +37,38 @@ const createPlayer = (...args) => {
         console.log(`Player Health: ${playerData.health}`);
     }
 
-    const playerInventory = [{
-        name: "Nothing Here",
-        quantity: 0,
-        price: 0,
-        quality: "None",
-    }];
+    // const playerInventory = [{
+    //     name: "Nothing Here",
+    //     quantity: 0,
+    //     price: 0,
+    //     quality: "None",
+    // }];
+
+    // Refactor this into its own module
+    const dumpProduct = (productName) => {
+        console.log(playerData.playerInventory)
+        for (let [index, drug] of playerData.playerInventory.entries()) {
+            console.log(drug);
+            if (drug.name === productName) {
+                playerData.playerInventory.splice(index, 1);
+                playerData.currentNumOfItems -= drug.quantity;
+                if (playerData.currentNumOfItems < 1) {
+                    playerData.playerInventory.push(createDrug("Nothing Here", 0, 0, 0));
+                }
+                playerData.lostDrugs.push(drug);
+                console.log(playerData.lostDrugs);
+                break;
+            }
+        }
+    }
 
 // playerName, currentDay, maxDays, cashOnHand, bankAccount, debt
 
     return {
         playerData,
         changeHealth,
-        playerInventory,
+        // playerInventory,
+        dumpProduct,
     }
 }
 
@@ -70,6 +95,8 @@ const getProductQtyFromPlayerInventory = (drugName) => {
 
     return 0;
 }
+
+
 
 export {
     createPlayer, 

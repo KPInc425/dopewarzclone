@@ -1,5 +1,4 @@
 import checkForItem from "./checkForItem";
-import checkNumOfItemsHeld from "./checkNumOfItemsHeld";
 import createDrug from "./createDrug";
 import { getPlayer1 } from "./player.js";
 

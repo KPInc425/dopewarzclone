@@ -4,7 +4,8 @@ html {
 }
 
 body {
-    max-width: 80%;
+    max-width: 90%;
+    min-width: 650px;
     margin: auto;
     color: white;
 }
