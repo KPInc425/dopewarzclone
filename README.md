@@ -8,7 +8,6 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 
--Finish Selling Product for cash logic to match new Buy product logic
 -Add inventoryTotal label somewhere
 -Dump Function
 -Travel Function
@@ -17,6 +16,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -LoanShark Function
 -Change buy/sell buttons to other actions as functionality has changed to click the drug.
 --Airport Function
+-Local saves
 
 -add onchange event to qty containers for available product and greyOut or remove/hide element with 0 qty left
 
@@ -26,6 +26,13 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 -Random Events
 -Flesh out buyitemswithcash function
+
+-scorboard
+--Profits/losses
+--Most money had
+--Biggest gains/losses
+--Most of products
+--Random events good/bad
 
 ??? Bugs ???
 -buy/sell value can manually be input to above/below max/mix product quanitity
@@ -63,3 +70,5 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -Modernized theme, phone/laptop app?
 --physical pickup vs digital dropoff?
 --lots of questions and possibilities for uniqueness
+-Missions to go or take something to a specific area
+-Lottery Tickets

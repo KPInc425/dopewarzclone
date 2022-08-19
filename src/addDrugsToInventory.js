@@ -2,6 +2,7 @@ import checkPriceAverage from './checkPriceAverage';
 import createDrug from './createDrug';
 import checkNumOfItemsHeld from './checkNumOfItemsHeld'
 import { getPlayer1 } from './player.js';
+import updateInventoryAmountDisplay from './updateInventoryAmountDisplay';
 
 // Add Item to Inventory Function
 const addDrugsToInventory = (addedItem) => {
@@ -45,7 +46,8 @@ const addDrugsToInventory = (addedItem) => {
             item.price = checkPriceAverage(item, addedItem);
             // console.log(item.price);
             console.log(player.playerData.playerInventory);
-            player.playerData.currentNumOfItems = checkNumOfItemsHeld();
+            player.playerData.currentNumOfItems += addedItem.quantity; //checkNumOfItemsHeld();
+            updateInventoryAmountDisplay();
             return 1;
         }    
     }  
@@ -58,7 +60,8 @@ const addDrugsToInventory = (addedItem) => {
     // Add new drug to inventory
     player.playerData.playerInventory.push(createDrug(addedItem.name, addedItem.price, addedItem.quantity, addedItem.quality));
     console.log(player.playerData.playerInventory);
-    player.playerData.currentNumOfItems = checkNumOfItemsHeld();
+    player.playerData.currentNumOfItems += addedItem.quantity; // //checkNumOfItemsHeld();
+    updateInventoryAmountDisplay();
     return 1;
 }
 

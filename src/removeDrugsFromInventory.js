@@ -31,7 +31,7 @@ const removeDrugsFromInventory = (removedItem) => {
         player.playerData.playerInventory.splice(index, 1);
         console.log("vvv Player Inventory vvv")
 
-        player.playerData.currentNumOfItems = checkNumOfItemsHeld();
+        player.playerData.currentNumOfItems -= removedItem.quantity; //= checkNumOfItemsHeld();
         // Re-add placeholder for empty inventory
         if (player.playerData.currentNumOfItems < 1) {
             player.playerData.playerInventory.push(createDrug("Nothing Here", 0, 0, 0));
@@ -42,6 +42,7 @@ const removeDrugsFromInventory = (removedItem) => {
         // Remove amt of items from object if there are more than removing
         item.quantity -= removedItem.quantity;
         console.log(`Item Quantity: ${item.quantity}`);
+        player.playerData.currentNumOfItems -= removedItem.quantity; //= checkNumOfItemsHeld();
         return 1;
     }
 

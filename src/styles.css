@@ -9,7 +9,7 @@ body {
     color: white;
 }
 
-h3 {
+h3, h5 {
     padding: 10px;
 }
 
@@ -191,4 +191,9 @@ button {
 .hidden {
     visibility: collapse;
     display: none;
+}
+
+.inventoryLabelContainer {
+    display: flex;
+    justify-content: center;
 }

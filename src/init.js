@@ -7,6 +7,7 @@ import { displayDrugBuySellList, displayPlayerDrugInventory } from './displayDru
 import { getPlayer1, setPlayer1 } from './player.js';
 import { createDrugList, setCurrentDrugList } from './drugFunctions.js';
 import { updateTravelButtons } from './updateTravelButtons.js';
+import updateInventoryAmountDisplay from './updateInventoryAmountDisplay.js';
 
 const init = () => { 
     setPlayer1();
@@ -42,6 +43,7 @@ const init = () => {
     
     displayDrugBuySellList(firstDrugList);
     displayPlayerDrugInventory();
+    updateInventoryAmountDisplay();
 }
 
 export default init;

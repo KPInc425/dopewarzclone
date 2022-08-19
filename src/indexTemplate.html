@@ -63,7 +63,7 @@
                 </fieldset>
             </form>
             <div id="availableProduct">
-                <h3>Available Product:</h3>
+                <h3>Available Product at <span id="venderNameLabel">VENDERNAME</span></h3>
                 <div class="productGrid">
                     <div class="productName"><p>Product Name</p></div>
                     <div class="productQty"><p>QTY</p></div>
@@ -74,7 +74,10 @@
                 </div>
             </div>
             <div id="productOnHand">
-                <h3>Inventory: STORAGETYPE</h3>
+                <div class="inventoryLabelContainer">
+                    <h3>Inventory: STORAGETYPE</h3>
+                    <h5>Amount: <span id="inventoryAmtLabel">0/0</span></h5>
+                </div>
                 <div class="productGrid">
                     <div class="productName"><p>Product Name</p></div>
                     <div class="productQty"><p>QTY</p></div>
