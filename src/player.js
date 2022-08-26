@@ -1,11 +1,4 @@
-import checkForItem from "./checkForItem";
 import createDrug from "./createDrug";
-import displayBuySellUI from "./displayBuySellUI";
-import { displayPlayerDrugInventory } from "./displayDrugList";
-import updateInventoryAmountDisplay from "./updateInventoryAmountDisplay";
-
-// Player Variables
-let window.player1;
 
 const createPlayer = (...args) => {
     let playerData = {
@@ -24,6 +17,7 @@ const createPlayer = (...args) => {
         currentLocationCity: args[12] || "Seattle, WA" ,
         currentLocal: args[13] || "Capitol Hill",
         currentTransportMethod: args[14] || "on the Bus", 
+        timeOfDay : args[15] || "Morning",
         playerInventory: [{
             name: "Nothing Here",
             quantity: 0,
@@ -78,9 +72,6 @@ const setPlayer1 = (...args) => {
     }
 }
 
-const getPlayer1 = () => {
-    return window.player1;
-}
 
 const getProductQtyFromPlayerInventory = (drugName) => {
     console.log(drugName);
@@ -107,7 +98,6 @@ const dumpAll = (player) => {
 export {
     createPlayer, 
     setPlayer1,
-    getPlayer1,
     getProductQtyFromPlayerInventory,
     dumpAll,
 }

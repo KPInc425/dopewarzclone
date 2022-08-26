@@ -4,10 +4,11 @@ import updateTransportationMethodDisplay from './updateTransportMethodDisplay.js
 import updateCurrencyDisplay from './updateCurrencyDisplay.js';
 import updateHealthDisplay from './updateHealthDisplay.js';
 import { displayDrugBuySellList, displayPlayerDrugInventory } from './displayDrugList.js';
-import { getPlayer1, setPlayer1 } from './player.js';
+import { setPlayer1 } from './player.js';
 import { createDrugList, setCurrentDrugList } from './drugFunctions.js';
 import { updateTravelButtons } from './updateTravelButtons.js';
 import updateInventoryAmountDisplay from './updateInventoryAmountDisplay.js';
+import { updateCurrentDayDisplay, updateTotalDaysDisplay } from './updateDaysDisplay.js';
 
 const init = () => { 
     setPlayer1();
@@ -27,8 +28,8 @@ const init = () => {
                           "needed to start your empire my friend! Sky's the limit and the " +
                           "only color we see is GREEEN!!";
 
-    alert(welcomMessage1);
-    alert(welcomeMEssage2);
+    // alert(welcomMessage1);
+    // alert(welcomeMEssage2);
 
     updateLocationDisplay(player.playerData.currentLocal);
     updateTransportationMethodDisplay(player.playerData.currentTransportMethod);
@@ -44,6 +45,8 @@ const init = () => {
     displayDrugBuySellList(firstDrugList);
     displayPlayerDrugInventory();
     updateInventoryAmountDisplay();
+    updateCurrentDayDisplay();
+    updateTotalDaysDisplay();
 
 }
 
