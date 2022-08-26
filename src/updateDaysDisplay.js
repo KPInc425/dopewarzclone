@@ -11,7 +11,12 @@ const updateTotalDaysDisplay = () => {
     currentDayCountDisplay.querySelector('.dayCount #totalDayCount').textContent = window.player1.playerData.maxDays;
 }
 
+const updateTimeOfDayDisplay = () => {
+    currentDayCountDisplay.querySelector('.timeOfDay').textContent = window.player1.playerData.timeOfDay;
+}
+
 export {
     updateCurrentDayDisplay,
     updateTotalDaysDisplay,
+    updateTimeOfDayDisplay,
 }

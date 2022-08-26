@@ -8,7 +8,7 @@ import { setPlayer1 } from './player.js';
 import { createDrugList, setCurrentDrugList } from './drugFunctions.js';
 import { updateTravelButtons } from './updateTravelButtons.js';
 import updateInventoryAmountDisplay from './updateInventoryAmountDisplay.js';
-import { updateCurrentDayDisplay, updateTotalDaysDisplay } from './updateDaysDisplay.js';
+import { updateCurrentDayDisplay, updateTimeOfDayDisplay, updateTotalDaysDisplay } from './updateDaysDisplay.js';
 
 const init = () => { 
     setPlayer1();
@@ -28,8 +28,8 @@ const init = () => {
                           "needed to start your empire my friend! Sky's the limit and the " +
                           "only color we see is GREEEN!!";
 
-    // alert(welcomMessage1);
-    // alert(welcomeMEssage2);
+    alert(welcomMessage1);
+    alert(welcomeMEssage2);
 
     updateLocationDisplay(player.playerData.currentLocal);
     updateTransportationMethodDisplay(player.playerData.currentTransportMethod);
@@ -47,6 +47,7 @@ const init = () => {
     updateInventoryAmountDisplay();
     updateCurrentDayDisplay();
     updateTotalDaysDisplay();
+    updateTimeOfDayDisplay();
 
 }
 
