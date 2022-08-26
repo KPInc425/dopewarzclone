@@ -5,7 +5,7 @@ import { displayPlayerDrugInventory } from "./displayDrugList";
 import updateInventoryAmountDisplay from "./updateInventoryAmountDisplay";
 
 // Player Variables
-let player1;
+let window.player1;
 
 const createPlayer = (...args) => {
     let playerData = {
@@ -74,18 +74,18 @@ const createPlayer = (...args) => {
 
 const setPlayer1 = (...args) => {
     if (args.length < 1) {
-        player1 = createPlayer();
+        window.player1 = createPlayer();
     }
 }
 
 const getPlayer1 = () => {
-    return player1;
+    return window.player1;
 }
 
 const getProductQtyFromPlayerInventory = (drugName) => {
     console.log(drugName);
-    console.log(player1.playerData.playerInventory);
-    for (let drug of player1.playerData.playerInventory) {
+    console.log(window.player1.playerData.playerInventory);
+    for (let drug of window.player1.playerData.playerInventory) {
         console.log(drug);
         if (drug.name === drugName) {
             // console.log(drug.quantity);

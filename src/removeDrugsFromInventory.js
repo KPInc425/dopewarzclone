@@ -5,7 +5,7 @@ import { getPlayer1 } from "./player.js";
 // Remove Item from Inventory Function
 const removeDrugsFromInventory = (removedItem) => {
 
-    let player = getPlayer1();
+    let player = window.player1;
 
     console.log(removedItem);
     let foundItem = checkForItem(removedItem);

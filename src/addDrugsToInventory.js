@@ -1,13 +1,13 @@
 import checkPriceAverage from './checkPriceAverage';
 import createDrug from './createDrug';
 import checkNumOfItemsHeld from './checkNumOfItemsHeld'
-import { getPlayer1 } from './player.js';
+// import { getPlayer1 } from './player.js';
 import updateInventoryAmountDisplay from './updateInventoryAmountDisplay';
 
 // Add Item to Inventory Function
 const addDrugsToInventory = (addedItem) => {
     console.log(addedItem);
-    let player = getPlayer1();
+    let player = window.player1
     let currentNumOfItems = checkNumOfItemsHeld();
     console.log(`Items Held: ${currentNumOfItems}g's`);
     // Check if inventory is full

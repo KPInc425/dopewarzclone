@@ -8,7 +8,7 @@ import { editVendorDrugQty } from './drugFunctions.js';
 
 // Sell items locally for cash
 const sellItemsForCash = (removedItem, currentLocation, vendor, avgQuality) => {
-    let player = getPlayer1();
+    let player = window.player1;
     let totalPrice = removedItem.price * removedItem.quantity;
     console.log(removedItem);
     

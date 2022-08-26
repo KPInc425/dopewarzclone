@@ -1,7 +1,7 @@
 import { getPlayer1 } from "./player";
 
 const updateInventoryAmountDisplay = () => {
-    const player = getPlayer1();
+    const player = window.player1;
     const storageAmtDisplay = document.getElementById('inventoryAmtLabel');
 
     storageAmtDisplay.textContent = `${player.playerData.currentNumOfItems}/${player.playerData.maxItems}`;

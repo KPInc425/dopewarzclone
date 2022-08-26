@@ -2,7 +2,7 @@ import { getPlayer1 } from "./player.js";
 
 // Check inventory for Item helper function
 const checkForItem = (itemToCheck) => {
-    let player = getPlayer1();
+    let player = window.player1;
     // https://flaviocopes.com/how-to-get-index-in-for-of-loop/
     for (let [index, item] of player.playerData.playerInventory.entries()) {
         console.log(item);

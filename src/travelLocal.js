@@ -5,7 +5,7 @@ import updateLocationDisplay from "./updateLocationDisplay";
 
 
 const travelLocal = (destination) => {
-    let player = getPlayer1();
+    let player = window.player1;
     let eventOutcome;
     let randomEvent;
 

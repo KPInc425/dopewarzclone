@@ -3,7 +3,7 @@ import { dumpAll, getPlayer1 } from "./player";
 import updateInventoryAmountDisplay from "./updateInventoryAmountDisplay";
 
 const el_clickedPlayerProduct = () => {
-    const player = getPlayer1();
+    const player = window.player1;
     const productNodeList = document.querySelectorAll('.productOnHandContainer');
 
     productNodeList.forEach((node) => {

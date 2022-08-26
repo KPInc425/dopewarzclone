@@ -11,7 +11,7 @@ import updateInventoryAmountDisplay from './updateInventoryAmountDisplay.js';
 
 const init = () => { 
     setPlayer1();
-    let player = getPlayer1();
+    let player = window.player1;
     const firstDrugList = createDrugList();
     setCurrentDrugList(firstDrugList);
     // console.log(player);
@@ -44,6 +44,7 @@ const init = () => {
     displayDrugBuySellList(firstDrugList);
     displayPlayerDrugInventory();
     updateInventoryAmountDisplay();
+
 }
 
 export default init;

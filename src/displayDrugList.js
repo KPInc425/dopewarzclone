@@ -48,7 +48,7 @@ const displayDrugBuySellList = () => {
 }
 
 const displayPlayerDrugInventory = () => {
-    let player = getPlayer1();
+    let player = window.player1;
     const productOnHandContainer = document.querySelector('.productOnHandContainer');
     productOnHandContainer.innerHTML = "";
 

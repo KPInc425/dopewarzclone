@@ -3,12 +3,11 @@ import changeMoney from './changeMoney';
 import createDrug from './createDrug';
 import { displayPlayerDrugInventory } from './displayDrugList';
 import { editVendorDrugQty } from './drugFunctions';
-import { getPlayer1 } from './player.js';
 import updateCurrencyDisplay from './updateCurrencyDisplay';
 
 // Buy items Locally with Cash
 const buyItemsWithCash = (addedItem, vendor, avgQuality) => {
-    let player = getPlayer1();
+    let player = window.player1;
     vendor = vendor || 'Local Dealer';
     avgQuality = avgQuality || 5.0;
     // console.log(player);
