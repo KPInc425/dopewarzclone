@@ -198,3 +198,7 @@ button {
     display: flex;
     justify-content: center;
 }
+
+.dayCount, .timeOfDay {
+    display: inline-block;
+}

@@ -1,5 +1,5 @@
 import { displayPlayerDrugInventory } from "./displayDrugList";
-import { getPlayer1 } from "./player";
+import { dumpAll, getPlayer1 } from "./player";
 import updateInventoryAmountDisplay from "./updateInventoryAmountDisplay";
 
 const el_clickedPlayerProduct = () => {

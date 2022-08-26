@@ -96,6 +96,12 @@ const getProductQtyFromPlayerInventory = (drugName) => {
     return 0;
 }
 
+const dumpAll = (player) => {
+    player.playerData.playerInventory = [];
+    player.playerData.playerInventory.push(createDrug("Nothing Here", 0, 0, 0));
+    player.playerData.currentNumOfItems = 0;
+}
+
 
 
 export {
@@ -103,4 +109,5 @@ export {
     setPlayer1,
     getPlayer1,
     getProductQtyFromPlayerInventory,
+    dumpAll,
 }

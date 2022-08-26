@@ -10,7 +10,6 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 
 -Dump All Function
--Travel Function
 -Store Function
 --Add store button under Player Data
 -LoanShark Function
@@ -69,3 +68,4 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 --lots of questions and possibilities for uniqueness
 -Missions to go or take something to a specific area
 -Lottery Tickets
+-Ability to choose how much of a product to dump when dumping individual products to dump
