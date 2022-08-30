@@ -74,7 +74,7 @@ const displayBuySellUI = (productName, productQty, productPrice) => {
     inputBuyProduct.addEventListener('change', () => {
         // console.log(inputBuyProduct.value);
         // console.log(productPrice);
-        labelTotalCost.textContent = `$${inputBuyProduct.value * productPrice}`;
+        labelTotalCost.textContent = `$${inputBuyProduct.value * productPrice}`;             
     })
     inputSellProduct.addEventListener('change', () => {
         labelTotalGain.textContent = `$${inputSellProduct.value * productPrice}`;

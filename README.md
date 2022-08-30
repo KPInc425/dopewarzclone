@@ -74,6 +74,3 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 
 current commit 
--prevent dump inventory item when inventory consists of "Nothing Here"
--Update labeling style of product price
--Implement debtIncrease function

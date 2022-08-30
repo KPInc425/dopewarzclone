@@ -12,7 +12,8 @@ const el_buyOrSellClickedProduct = () => {
             let productQty = node.querySelector('.productQty > p').textContent;
             // console.log(productQty);
             let productPrice = node.querySelector('.productPrice > p').textContent;
-            // console.log(productPrice);
+            productPrice = Number(productPrice.slice(1).replace('/g', ''));
+            console.log(productPrice);
 
             displayBuySellUI(productName, productQty, productPrice);
         })
