@@ -1,5 +1,3 @@
-import { getPlayer1 } from "./player";
-
 const updateInventoryAmountDisplay = () => {
     const player = window.player1;
     const storageAmtDisplay = document.getElementById('inventoryAmtLabel');

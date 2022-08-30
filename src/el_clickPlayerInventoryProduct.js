@@ -18,11 +18,13 @@ const el_clickedPlayerProduct = () => {
             let productPrice = node.querySelector('.productPrice > p').textContent;
             console.log(productPrice);
 
-            let dump = confirm("Do you want to dump?");
-            if (dump) {
-                player.dumpProduct(productName);
-                updateInventoryAmountDisplay();
-                displayPlayerDrugInventory();
+            if (productName !== 'Nothing Here') {
+                let dump = confirm("Do you want to dump?");
+                if (dump) {
+                    player.dumpProduct(productName);
+                    updateInventoryAmountDisplay();
+                    displayPlayerDrugInventory();
+                }
             }
         })
     })

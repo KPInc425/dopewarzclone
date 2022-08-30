@@ -40,6 +40,7 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 ### Recodes ###
 -Consolidate clicking on products EL's just change inputs to [selector] and possibly function to display UI?
 -Add input for targetInventory for add/remove items for inventory to make more modular and easier to add already implemented checks for adding inventory items
+-Seperate buy sell function and trigger from player inventory instead from "vendor" inventory
 
 --possible mechanics--
 
@@ -69,3 +70,10 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -Missions to go or take something to a specific area
 -Lottery Tickets
 -Ability to choose how much of a product to dump when dumping individual products to dump
+
+
+
+current commit 
+-prevent dump inventory item when inventory consists of "Nothing Here"
+-Update labeling style of product price
+-Implement debtIncrease function

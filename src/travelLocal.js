@@ -1,6 +1,7 @@
 import changeTimeOfDay from "./changeTimeOfDay";
 import { displayDrugBuySellList } from "./displayDrugList";
 import { createDrugList, setCurrentDrugList } from "./drugFunctions";
+import increaseInterestAmount from "./increaseInterestAmount";
 import updateLocationDisplay from "./updateLocationDisplay";
 
 
@@ -43,6 +44,7 @@ const travelLocal = (destination) => {
         displayDrugBuySellList();
         updateLocationDisplay(destination)
         changeTimeOfDay();
+        increaseInterestAmount();
 
     // } else {
     //     console.log(`Doesn't look like your going to make it today, ${eventOutcome} 

@@ -37,7 +37,7 @@ const init = () => {
     updateCurrencyDisplay('cashDisplay', player.playerData.cashOnHand);
     // console.log(player.playerData.bankAccount);
     updateCurrencyDisplay('bankDisplay', player.playerData.bankAccount);
-    updateCurrencyDisplay('debtDisplay', player.playerData.debt);
+    updateCurrencyDisplay('debtDisplay', player.playerData.debt.value);
     updateHealthDisplay(player.playerData.health);
 
 

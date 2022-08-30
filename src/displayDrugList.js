@@ -36,7 +36,7 @@ const displayDrugBuySellList = () => {
         let drugPriceContainer = document.createElement('div');
         drugPriceContainer.classList.add('productPrice');
         let drugPrice = document.createElement('p');
-        drugPrice.textContent = drug.price;
+        drugPrice.textContent = `$${drug.price}/g`;
 
         drugPriceContainer.appendChild(drugPrice);
         drugDataContainer.appendChild(drugPriceContainer);
@@ -77,7 +77,7 @@ const displayPlayerDrugInventory = () => {
         drugPriceContainer.classList.add('productPrice');
         let drugPrice = document.createElement('p');
 
-        drugPrice.textContent = drug.price;
+        drugPrice.textContent = `$${drug.price}/g`;
 
         drugPriceContainer.appendChild(drugPrice);
         drugDataContainer.appendChild(drugPriceContainer);

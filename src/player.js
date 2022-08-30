@@ -3,11 +3,11 @@ import createDrug from "./createDrug";
 const createPlayer = (...args) => {
     let playerData = {
         name : args[0] || "That Dope Guy",
-        currentDay : args[1] || 29,
+        currentDay : args[1] || 1,
         maxDays : args[2] || 30,
         cashOnHand : args[3] || 2000,
         bankAccount : args[4] || 0,
-        debt : args[5] || 2500,
+        debt : args[5] || { value: 2500, taxRate: 0.08},
         guns : args[6] || [],
         health : args[7] || 100,
         maxItems : args[8] || 100,
