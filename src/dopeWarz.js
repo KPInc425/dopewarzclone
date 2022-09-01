@@ -2,9 +2,14 @@ import './reset.css';
 import './styles.css';
 // import './D5zdtk0.jpeg';
 import el_btnNewGame from './el_newGame';
+import displayNarrative from './displayNarrative';
+
 
 
 // const app = (() => {
+
+
+
 
     console.log("Testing...")
 

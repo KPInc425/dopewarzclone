@@ -8,7 +8,6 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 
-
 -Dump All Function
 -Store Function
 --Add store button under Player Data
@@ -70,7 +69,8 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 -Missions to go or take something to a specific area
 -Lottery Tickets
 -Ability to choose how much of a product to dump when dumping individual products to dump
+-Dealers at locations
+--They passively generate money while your away
+--possibility of getting busted
+---have to bail out, etc.
 
-
-
-current commit 

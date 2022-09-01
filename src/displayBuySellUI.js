@@ -71,12 +71,12 @@ const displayBuySellUI = (productName, productQty, productPrice) => {
     gameContainer.appendChild(containerBuySellProduct);
 
 
-    inputBuyProduct.addEventListener('change', () => {
+    inputBuyProduct.addEventListener('input', () => {
         // console.log(inputBuyProduct.value);
         // console.log(productPrice);
         labelTotalCost.textContent = `$${inputBuyProduct.value * productPrice}`;             
     })
-    inputSellProduct.addEventListener('change', () => {
+    inputSellProduct.addEventListener('input', () => {
         labelTotalGain.textContent = `$${inputSellProduct.value * productPrice}`;
     })
     btnCancel.addEventListener('click', () => {

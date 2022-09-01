@@ -202,3 +202,36 @@ button {
 .dayCount, .timeOfDay {
     display: inline-block;
 }
+
+.narrativeContainer {
+    position: absolute;
+    border: 10px solid rgb(75, 255, 75);
+    border-style: double;
+    border-radius: 12px;
+    width: 50%;
+    height: fit-content;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: black;
+    padding: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: rgb(75, 255, 75);
+}
+
+#btnNext {
+    margin-top: 25px;
+    border: 1px solid rgb(75, 255, 75);
+    background: none;
+    color: rgb(75, 255, 75);
+}
+
+#btnNext:hover {
+    background-color: rgb(75, 255, 75);
+    color: black;
+}
+
+#btnNext:active {
+    background-color: rgba(75, 255, 75, 0.505);
+}

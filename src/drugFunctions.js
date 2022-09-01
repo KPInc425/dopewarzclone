@@ -50,9 +50,9 @@ const createDrugList = (...args) => {
         
 
         if (coinFlip > luckMultiplier) {
-            calculatedPrice = Math.floor(drug.price + ((Math.floor(Math.random() * 20) / 100) * drug.price));
+            calculatedPrice = Math.floor(drug.price + ((Math.floor(Math.random() * 30) / 100) * drug.price));
         } else {
-            calculatedPrice = Math.floor(drug.price - ((Math.floor(Math.random() * 20) / 100) * drug.price));
+            calculatedPrice = Math.floor(drug.price - ((Math.floor(Math.random() * 30) / 100) * drug.price));
         }
 
         let calculatedQty = Math.floor(((Math.random() * qtyMax) * localMultiplier) * luckEffect);
