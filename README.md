@@ -8,6 +8,9 @@ Original inspiration goes to the classic game DrugWars that I grew up playing.
 
 --ToDo--
 
+-make loan Shark UI
+--Add EL for opening UI with loanshark button
+
 -Dump All Function
 -Store Function
 --Add store button under Player Data

@@ -9,6 +9,7 @@ import { createDrugList, setCurrentDrugList } from './drugFunctions.js';
 import { updateTravelButtons } from './updateTravelButtons.js';
 import updateInventoryAmountDisplay from './updateInventoryAmountDisplay.js';
 import { updateCurrentDayDisplay, updateTimeOfDayDisplay, updateTotalDaysDisplay } from './updateDaysDisplay.js';
+import { payLoan } from './loanSharkFunctions.js';
 
 const init = () => { 
     setPlayer1();

@@ -20,15 +20,23 @@ const displayNarrative = async (content, cb) => {
             narrativeContainer.classList.add('hidden');
             console.log(content.length);
             if (i < content.length - 1) {
-                i++;
-                console.log(i);
-                displayNarrativeLoop(content);
+                if (content[i] === "~Checking for Random Event~") {
+                    //flipCoin > getRandomEvent || skip Event
+                    i++;
+                    console.log(i);
+                    displayNarrativeLoop(content);
+                } else {
+                    i++;
+                    console.log(i);
+                    displayNarrativeLoop(content);
+                }
+
             } else {
                 console.log(i);
                 narrativeContainer.classList.add('hidden');
                 cb();
             }
-        }, {once: true});
+        }, {once: true}); // This prevents it from overFiring, find out if this leaves them there still and/or effects performance
     }
 }
 
