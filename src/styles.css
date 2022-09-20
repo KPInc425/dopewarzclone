@@ -207,7 +207,7 @@ button {
     position: absolute;
     border: 10px solid rgb(75, 255, 75);
     border-style: double;
-    border-radius: 12px;
+    border-radius: 0 20px 0 20px;
     width: 50%;
     height: fit-content;
     top: 20%;

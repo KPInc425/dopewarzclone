@@ -10,6 +10,7 @@ import { updateTravelButtons } from './updateTravelButtons.js';
 import updateInventoryAmountDisplay from './updateInventoryAmountDisplay.js';
 import { updateCurrentDayDisplay, updateTimeOfDayDisplay, updateTotalDaysDisplay } from './updateDaysDisplay.js';
 import { payLoan } from './loanSharkFunctions.js';
+import { el_clickLoanShark } from './el_clickLoanShark.js';
 
 const init = () => { 
     setPlayer1();
@@ -25,6 +26,7 @@ const init = () => {
     updateLocationDisplay(player.playerData.currentLocal);
     updateTransportationMethodDisplay(player.playerData.currentTransportMethod);
     updateTravelButtons(player.playerData.currentLocationCity);
+    el_clickLoanShark();
     updateCurrencyDisplay('cashDisplay', player.playerData.cashOnHand);
     // console.log(player.playerData.bankAccount);
     updateCurrencyDisplay('bankDisplay', player.playerData.bankAccount);
